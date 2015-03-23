@@ -6,9 +6,6 @@ import fr.shadcanard.fbm.references.Names;
 
 public class ModItems {
     public static ItemFBM bambooSword;
-    public static ItemFBM fantaGlasses;
-    public static ItemFBM cobbleTie;
-    public static ItemFBM hairPotion;
     public static ItemFBM magabondChop;
     public static ItemFBM magabondRecord;
     public static ItemFBM toothBrush;

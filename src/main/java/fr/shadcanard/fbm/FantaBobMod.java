@@ -13,6 +13,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
 import fr.shadcanard.fbm.blocks.BlockFBM;
 import fr.shadcanard.fbm.creativeTab.FBMTabs;
+import fr.shadcanard.fbm.init.ModArmor;
 import fr.shadcanard.fbm.init.ModBlocks;
 import fr.shadcanard.fbm.init.ModItems;
 import fr.shadcanard.fbm.proxy.ClientProxy;
@@ -41,9 +42,10 @@ public class FantaBobMod {
     public void preInit(FMLPreInitializationEvent event){
         ModBlocks.init();
         ModItems.init();
+        ModArmor.init();
 
 
-        proxy.registerRender();
+        //proxy.registerRender();
 
         LogHelper.info("Pre Initialization Complete !");
     }

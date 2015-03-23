@@ -1,12 +1,6 @@
 # Created by .ignore support plugin (hsz.mobi)
-.gradle
 build
 eclipse
-gradle
-build.gradle
 FantaBobMod.ipr
 FantaBobMod.iml
 FantaBobMod.iws
-gradlew
-gradlew.bat
-src/main/java/com/pahimar/letsmodreboot
