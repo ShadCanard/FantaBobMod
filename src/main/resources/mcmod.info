@@ -1,0 +1,23 @@
+[
+{
+"modid": "fbm",
+"name": "FantaBobMod !",
+"description": "Libérez la puissance du PyroBarbare et du FailTasio dans votre Minecraft !",
+"version": "1.0",
+"mcversion": "1.7.10",
+"url": "",
+"updateUrl": "",
+"authorList": [
+"ShadCanard",
+"outaDev",
+"robin4002"
+],
+"credits": "Merci à tous, coincoin",
+"logoFile": "",
+"screenshots": [
+],
+"parent":"",
+"dependencies": [
+]
+}
+]
