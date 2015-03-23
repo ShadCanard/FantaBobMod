@@ -20,6 +20,8 @@ import fr.shadcanard.fbm.references.Reference;
 import fr.shadcanard.fbm.utils.LogHelper;
 
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.ItemArmor;
+import net.minecraftforge.common.util.EnumHelper;
 
 import java.awt.*;
 
@@ -31,9 +33,8 @@ public class FantaBobMod {
     public static FantaBobMod instance;
     public static CreativeTabs fbmCreativeTabs = new FBMTabs(Reference.MOD_NAME + "_creative_tab");
     public BlockFBM blockBouze;
+    public static ItemArmor.ArmorMaterial FBMArmor = EnumHelper.addArmorMaterial("FBMArmor",5,new int[]{1,3,2,1},15);
 
-
-    @SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
     public static ClientProxy proxy;
 
     @Mod.EventHandler
