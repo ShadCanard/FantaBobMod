@@ -14,9 +14,13 @@ public class Names {
         public static final String HAIR_POTION = "hairPotion";
         public static final String MAGABOND_CHOP = "magabondChop";
         public static final String MAGABOND_RECORD = "magabondRecord";
+        public static final String FANTAAVION_RECORD = "fantaAvionRecord";
+        public static final String PYROBARBARE_RECORD = "pyroBarbareRecord";
         public static final String TOOTH_BRUSH = "toothBrush";
         public static final String STAMP_COLLECTION = "stampCollection";
         public static final String AVION_RECORD = "avionRecord";
+        public static final String BOB_AXE = "bobAxe";
+        public static final String PYROBARBARE_AXE = "pyroAxe";
     }
 
     public class Entities{

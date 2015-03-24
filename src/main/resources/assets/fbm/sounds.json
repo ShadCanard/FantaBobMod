@@ -147,8 +147,10 @@
         "type": "event",
         "weight": 4
       },
-      "mob/fanta/hurt1",
-      "mob/fanta/hurt2"
+      "mob/bot/idle1",
+      "mob/bot/idle2",
+      "mob/bot/idle3",
+      "mob/bot/idle4"
     ]
   },
   "mob.kevin.idle": {

@@ -1,8 +1,22 @@
-itemGroup.FantaBobMod_creative_tab.name = FantaBobMod !
-tile.fbm:blockBouze.name=Bloc de Bouse
-item.fbm:bambooSword.name=Epée en Bambou
-item.fbm:hairPotion.name=Potion capillaire
-item.fbm:magabondChop.name=Morceau de Magabond
-item.fbm:magabondRecord.name=Disque Magabond
+####Creative Tab
+itemGroup.fbm=FantaBobMod !
+
+####Blocks
+tile.fbm:blockBouze.name=Bloc de bouse
+
+####Items
+item.bambooSword.name=Epée en bambou
+item.hairPotion.name=Potion capilaire
+item.fbm:magabondChop.name=Morceau de magabond
 item.fbm:toothBrush.name=Brosse à dents
 item.fbm:stampCollection.name=Collection de timbres
+item.fantaGlasses.name=Lunettes de Fanta
+item.cobbleTie.name= Cravatte en cobblestone
+
+#### Music Disks
+item.avionRecord.name=Disque
+item.magabondRecord.name=Disque
+item.pyroBarbareRecord.name=Disque
+item.avionRecord.desc=Fanta - Dans mon avion
+item.magabondRecord.desc=Bob - MagabondMix
+item.pyroBarbareRecord.desc=Bob - Chanson du Pyrobarbare

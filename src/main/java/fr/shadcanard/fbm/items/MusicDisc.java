@@ -1,6 +1,7 @@
 package fr.shadcanard.fbm.items;
 
 
+import fr.shadcanard.fbm.FantaBobMod;
 import fr.shadcanard.fbm.references.Reference;
 import net.minecraft.block.BlockJukebox;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -33,6 +34,7 @@ public class MusicDisc extends ItemRecord
 
         this.recordName = recordName;
         this.maxStackSize = 1;
+        setCreativeTab(FantaBobMod.fbmCreativeTabs);
 
 
 
@@ -44,7 +46,7 @@ public class MusicDisc extends ItemRecord
     @Override
     public void registerIcons(IIconRegister iconRegister)
     {
-        itemIcon = iconRegister.registerIcon(Reference.MOD_ID + ":" + "record" + recordName);
+        itemIcon = iconRegister.registerIcon(Reference.MOD_ID + ":" + recordName + "Record");
     }
 
 
