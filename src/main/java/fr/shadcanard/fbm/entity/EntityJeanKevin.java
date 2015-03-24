@@ -1,19 +1,16 @@
 package fr.shadcanard.fbm.entity;
 
-import fr.shadcanard.fbm.FantaBobMod;
 import fr.shadcanard.fbm.achievements.AchievementHandler;
 import fr.shadcanard.fbm.init.ModItems;
-import fr.shadcanard.fbm.references.Reference;
-import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityCreature;
+import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.stats.Achievement;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 
 public class EntityJeanKevin extends EntityCreature {
@@ -22,7 +19,6 @@ public class EntityJeanKevin extends EntityCreature {
     public EntityJeanKevin(World world)
     {
         super(world);
-        ResourceLocation texture = new ResourceLocation(Reference.MOD_ID, "/texutes/entity/char.png");
     }
 
     @Override
@@ -47,19 +43,25 @@ public class EntityJeanKevin extends EntityCreature {
         return null;
     }
 
+    @Override
+    protected void applyEntityAttributes() {
+        super.applyEntityAttributes();
+        this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.8D);
+    }
+
     protected String getHurtSound()
     {
-        return "fantabob.kevinhurt";
+        return "fbm:mob.kevin.hurt";
     }
 
     protected String getDeathSound()
     {
-        return "fantabob.kevindeath";
+        return "fbm:mob.kevin.death";
     }
 
     protected String getLivingSound()
     {
-        return "fantabob.kevin";
+        return "fbm:mob.kevin.idle";
     }
 
     public Achievement getKillAch()
@@ -92,8 +94,8 @@ public class EntityJeanKevin extends EntityCreature {
         }
     }
 
-    public boolean attackEntityFrom(DamageSource par1DamageSource, int par2)
-    {
+    @Override
+    public boolean attackEntityFrom(DamageSource par1DamageSource, float par2) {
         super.attackEntityFrom(par1DamageSource, par2);
         entityToAttack = null;
         return false;

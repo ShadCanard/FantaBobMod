@@ -25,6 +25,9 @@ public class Names {
 
     public class Entities{
         public static final String BOB = "boblennon";
+        public static final String FANTA = "fanta";
+        public static final String JEAN_KEVIN = "jeankevin";
+        public static final String BOT = "botlennon";
     }
 
     public class Achievements{

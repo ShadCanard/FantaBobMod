@@ -31,5 +31,6 @@ public class ModItems {
         GameRegistry.registerItem(magabondChop, Names.Items.MAGABOND_CHOP);
         GameRegistry.registerItem(toothBrush, Names.Items.TOOTH_BRUSH);
         GameRegistry.registerItem(stampCollection, Names.Items.STAMP_COLLECTION);
+
     }
 }

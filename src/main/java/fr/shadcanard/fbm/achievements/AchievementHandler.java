@@ -1,5 +1,6 @@
 package fr.shadcanard.fbm.achievements;
 
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import fr.shadcanard.fbm.init.ModArmor;
 import fr.shadcanard.fbm.init.ModBlocks;
 import fr.shadcanard.fbm.init.ModItems;

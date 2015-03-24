@@ -12,6 +12,9 @@ item.fbm:toothBrush.name=Brosse à dents
 item.fbm:stampCollection.name=Collection de timbres
 item.fantaGlasses.name=Lunettes de Fanta
 item.cobbleTie.name= Cravatte en cobblestone
+item.bobAxe.name=Hache de Barbare
+item.pyroAxe.name=Hache de PyroBarbare
+item.pyroAxe.desc=La hache du Pyro-Pyro !
 
 #### Music Disks
 item.avionRecord.name=Disque
@@ -20,3 +23,42 @@ item.pyroBarbareRecord.name=Disque
 item.avionRecord.desc=Fanta - Dans mon avion
 item.magabondRecord.desc=Bob - MagabondMix
 item.pyroBarbareRecord.desc=Bob - Chanson du Pyrobarbare
+
+####Entities
+entity.boblennon.name=Boblennon
+entity.fanta.name=theFantasio974
+
+####Achievements
+achievement.killFanta=Spirou
+achievement.killBotLennon=Tas de ferraille
+achievement.installMod=La babibase
+achievement.craftMagabondRec=Magabooond
+achievement.flood=Flooooooooood!
+achievement.killJeanKevin=Sauveur de l'humanité
+achievement.getBouse=Elément Naturel
+achievement.brushTeeth=Hygiène Dentaire
+achievement.getHairPotion=Crâne rasé
+achievement.getStampCollection=Philatéliste
+achievement.getCobbleTie=Bonjour patron !
+achievement.getBambooSword=Assassin au naturel
+achievement.getMagabondChop=Repas avarié
+achievement.getFantaGlasses=Binoclard
+achievement.killBob=BobLennon Hater
+
+
+####Achievements description
+achievement.killFanta.desc=Tuer Fanta
+achievement.killBotLennon.desc=Tuer Botlennon
+achievement.installMod.desc=Installer le mod
+achievement.craftMagabondRec.desc=Crafter un disque de MagabondMix
+achievement.flood.desc=Être suivi par Jean-Kevin
+achievement.killJeanKevin.desc=Tuer Jean-Kevin
+achievement.getBouse.desc=Crafter de la bouse
+achievement.brushTeeth.desc=Se brosser les dents
+achievement.getHairPotion.desc=Crafter de la potion capillaire
+achievement.getStampCollection.desc=Crafter une collection de timbres
+achievement.getCobbleTie.desc=Crafter une cravate en cobble
+achievement.getBambooSword.desc=Crafter une épée en bambou
+achievement.getMagabondChop.desc=Obtenir un morceau de Magabond
+achievement.getFantaGlasses.desc=Obtenir les lunettes de Fanta
+achievement.killBob.desc=Tuer Boblennon
