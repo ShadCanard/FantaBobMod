@@ -1,0 +1,192 @@
+{
+  "records.fantaAvion":{
+    "sounds":[
+      {
+        "name":"records/fantaAvion",
+        "stream":true
+      }
+    ]
+  ,"category":"record"
+  },
+  "records.pyroBarbare":
+  {
+    "sounds": [
+      {
+        "name":"records/pyroBarbare",
+        "stream":true
+      }
+    ]
+  ,"category":"record"
+  },
+  "records.magabondMix":
+  {
+    "sounds": [
+      {
+        "name":"records/magabondMix",
+        "stream":true
+      }
+    ]
+  ,"category":"record"
+  },
+  "mob.bob.hurt": {
+    "category": "neutral",
+    "replace": true,
+    "sounds": [
+      {
+        "name": "bob.hurt",
+        "type": "event",
+        "weight": 6
+      },
+      "mob/bob/hurt1",
+      "mob/bob/hurt2",
+      "mob/bob/hurt3",
+      "mob/bob/hurt4",
+      "mob/bob/hurt5"
+    ]
+  },
+  "mob.bob.death": {
+    "category": "neutral",
+    "replace": true,
+    "sounds": [
+      {
+        "name": "bob.death",
+        "type": "event",
+        "weight": 4
+      },
+      "mob/bob/death1",
+      "mob/bob/death2",
+      "mob/bob/death3",
+      "mob/bob/death4"
+    ]
+  },
+  "mob.bob.idle": {
+  "category": "neutral",
+  "replace": true,
+  "sounds": [
+    {
+      "name": "bob.idle",
+      "type": "event",
+      "weight": 4
+    },
+    "mob/bob/idle1",
+    "mob/bob/idle2",
+    "mob/bob/idle3",
+    "mob/bob/idle4",
+    "mob/bob/idle5",
+    "mob/bob/idle6",
+    "mob/bob/idle7",
+    "mob/bob/idle8",
+    "mob/bob/idle9",
+    "mob/bob/idle10",
+    "mob/bob/idle11"
+  ]
+},
+  "mob.bob.burn": {
+    "category": "neutral",
+    "replace": true,
+    "sounds": [
+      {
+        "name": "bob.burn",
+        "type": "event",
+        "weight": 4
+      },
+
+      "mob/bob/burn1",
+      "mob/bob/burn2"
+    ]
+  },
+  "mob.fanta.death": {
+    "category": "neutral",
+    "replace": true,
+    "sounds": [
+      {
+        "name": "fanta.death",
+        "type": "event",
+        "weight": 4
+      },
+      "mob/fanta/death1",
+      "mob/fanta/death2",
+      "mob/fanta/death3",
+      "mob/fanta/death4"
+    ]
+  },
+  "mob.fanta.idle": {
+    "category": "neutral",
+    "replace": true,
+    "sounds": [
+      {
+        "name": "fanta.death",
+        "type": "event",
+        "weight": 4
+      },
+      "mob/fanta/idle1",
+      "mob/fanta/idle2",
+      "mob/fanta/idle3",
+      "mob/fanta/idle4"
+    ]
+  },
+  "mob.fanta.hurt": {
+    "category": "neutral",
+    "replace": true,
+    "sounds": [
+      {
+        "name": "fanta.hurt",
+        "type": "event",
+        "weight": 4
+      },
+      "mob/fanta/hurt1",
+      "mob/fanta/hurt2"
+    ]
+  },
+  "mob.bot.idle": {
+    "category": "neutral",
+    "replace": true,
+    "sounds": [
+      {
+        "name": "fanta.hurt",
+        "type": "event",
+        "weight": 4
+      },
+      "mob/fanta/hurt1",
+      "mob/fanta/hurt2"
+    ]
+  },
+  "mob.kevin.idle": {
+    "category": "neutral",
+    "replace": true,
+    "sounds": [
+      {
+        "name": "kevin.idle",
+        "type": "event",
+        "weight": 4
+      },
+      "mob/kevin/idle1",
+      "mob/kevin/idle2",
+      "mob/kevin/idle3"
+    ]
+  },
+  "mob.kevin.death": {
+    "category": "neutral",
+    "replace": true,
+    "sounds": [
+      {
+        "name": "kevin.death",
+        "type": "event",
+        "weight": 4
+      },
+      "mob/kevin/death"
+    ]
+  },
+  "mob.kevin.hurt": {
+    "category": "neutral",
+    "replace": true,
+    "sounds": [
+      {
+        "name": "kevin.hurt",
+        "type": "event",
+        "weight": 4
+      },
+      "mob/kevin/hurt"
+    ]
+  }
+}

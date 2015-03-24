@@ -36,6 +36,7 @@ public class FantaBobMod {
     public BlockFBM blockBouze;
     public static ItemArmor.ArmorMaterial FBMArmor = EnumHelper.addArmorMaterial("FBMArmor",5,new int[]{1,3,2,1},15);
 
+    @SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
     public static ClientProxy proxy;
 
     @Mod.EventHandler
@@ -43,9 +44,7 @@ public class FantaBobMod {
         ModBlocks.init();
         ModItems.init();
         ModArmor.init();
-
-
-        //proxy.registerRender();
+        proxy.registerRender();
 
         LogHelper.info("Pre Initialization Complete !");
     }

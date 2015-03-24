@@ -16,6 +16,7 @@ public class Names {
         public static final String MAGABOND_RECORD = "magabondRecord";
         public static final String TOOTH_BRUSH = "toothBrush";
         public static final String STAMP_COLLECTION = "stampCollection";
+        public static final String AVION_RECORD = "avionRecord";
     }
 
     public class Entities{

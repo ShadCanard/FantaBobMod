@@ -1,1 +1,8 @@
-tile.fbm:blockBouze.name=Bloc de Bouze
+itemGroup.FantaBobMod_creative_tab.name = FantaBobMod !
+tile.fbm:blockBouze.name=Crap Block
+tile.fbm:bambooSword.name=Bamboo Sword
+tile.fbm:hairPotion.name=Hair Potion
+tile.fbm:magabondChop.name=Magabond Chop
+tile.fbm:magabondRecord.name=Marabond Record
+tile.fbm:toothBrush.name=Tooth Brush
+tile.fbm:stampCollection.name=Stamp Collection
