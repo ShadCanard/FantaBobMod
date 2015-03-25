@@ -4,7 +4,6 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import fr.shadcanard.fbm.init.ModArmor;
 import fr.shadcanard.fbm.init.ModBlocks;
 import fr.shadcanard.fbm.init.ModItems;
-import fr.shadcanard.fbm.references.Names;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;

@@ -7,6 +7,8 @@ import net.minecraft.client.renderer.entity.RenderBiped;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.util.ResourceLocation;
 
+
+@SuppressWarnings("UnusedDeclaration")
 public class RenderBob extends RenderBiped {
 
     public final ResourceLocation texture = new ResourceLocation(Reference.MOD_ID, "textures/entity/bob.png");

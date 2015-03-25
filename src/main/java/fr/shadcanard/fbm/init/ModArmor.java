@@ -3,7 +3,6 @@ package fr.shadcanard.fbm.init;
 import cpw.mods.fml.common.registry.GameRegistry;
 import fr.shadcanard.fbm.items.ItemArmorFBM;
 import fr.shadcanard.fbm.references.Names;
-import fr.shadcanard.fbm.references.Reference;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraftforge.common.util.EnumHelper;

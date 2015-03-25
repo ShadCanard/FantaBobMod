@@ -1,19 +1,6 @@
 package fr.shadcanard.fbm.achievements;
 
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import fr.shadcanard.fbm.init.ModArmor;
-import fr.shadcanard.fbm.init.ModBlocks;
-import fr.shadcanard.fbm.init.ModItems;
-import fr.shadcanard.fbm.references.Names;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
-import net.minecraft.item.Item;
-import net.minecraft.stats.Achievement;
-import net.minecraft.stats.AchievementList;
-
-import java.util.ArrayList;
-import java.util.List;
-
+@SuppressWarnings("UnusedDeclaration")
 public class AchievementHandler {
 /*
     public List achievementList = new ArrayList();

@@ -3,6 +3,7 @@ package fr.shadcanard.fbm.utils;
 import fr.shadcanard.fbm.references.Reference;
 import net.minecraft.util.ResourceLocation;
 
+@SuppressWarnings("UnusedDeclaration")
 public class LocationHelper {
     public String ItemLocation(String itemName){
         return new ResourceLocation(Reference.MOD_ID, itemName).toString();

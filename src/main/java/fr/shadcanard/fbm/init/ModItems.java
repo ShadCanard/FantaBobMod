@@ -1,7 +1,6 @@
 package fr.shadcanard.fbm.init;
 
 import cpw.mods.fml.common.registry.GameRegistry;
-import fr.shadcanard.fbm.FantaBobMod;
 import fr.shadcanard.fbm.items.*;
 import fr.shadcanard.fbm.references.Names;
 import net.minecraft.item.Item;
@@ -31,6 +30,5 @@ public class ModItems {
         GameRegistry.registerItem(magabondChop, Names.Items.MAGABOND_CHOP);
         GameRegistry.registerItem(toothBrush, Names.Items.TOOTH_BRUSH);
         GameRegistry.registerItem(stampCollection, Names.Items.STAMP_COLLECTION);
-
     }
 }

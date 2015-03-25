@@ -8,6 +8,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 
+@SuppressWarnings("UnusedDeclaration")
 public class BlockFBM extends Block {
         public BlockFBM(Material material)
         {

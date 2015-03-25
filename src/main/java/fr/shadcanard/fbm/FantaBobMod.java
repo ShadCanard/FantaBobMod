@@ -11,9 +11,9 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
-import fr.shadcanard.fbm.achievements.AchievementHandler;
 import fr.shadcanard.fbm.blocks.BlockFBM;
 import fr.shadcanard.fbm.creativeTab.FBMTabs;
+import fr.shadcanard.fbm.handler.ConfigurationHandler;
 import fr.shadcanard.fbm.handler.CraftingHandler;
 import fr.shadcanard.fbm.init.ModArmor;
 import fr.shadcanard.fbm.init.ModBlocks;
@@ -25,6 +25,7 @@ import fr.shadcanard.fbm.utils.LogHelper;
 
 import net.minecraft.creativetab.CreativeTabs;
 
+@SuppressWarnings("ALL")
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.MOD_VERSION, guiFactory = Reference.GUI_FACTORY_CLASS)
 public class FantaBobMod {
 
@@ -39,6 +40,7 @@ public class FantaBobMod {
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event){
+        ConfigurationHandler.init(event.getSuggestedConfigurationFile());
         ModBlocks.init();
         ModItems.init();
         ModArmor.init();

@@ -12,13 +12,15 @@ import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 
+@SuppressWarnings("UnusedDeclaration")
 public class FBMArmor extends ItemArmor {
+
     public FBMArmor(ArmorMaterial armorMaterial, int par1, int par2, boolean isBob) {
         super(armorMaterial, par1, par2);
         this.setCreativeTab(FantaBobMod.fbmCreativeTabs);
         if((par2 == 0) && isBob){
             this.setUnlocalizedName(Names.Items.HAIR_POTION);
-        }else if((par2 == 0 && !isBob)){
+        }else if((par2 == 0)){
             this.setUnlocalizedName(Names.Items.FANTA_GLASSES);
         }else{
             this.setUnlocalizedName(Names.Items.COBBLE_TIE);

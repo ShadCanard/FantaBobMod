@@ -14,7 +14,7 @@ public class Names {
         public static final String HAIR_POTION = "hairPotion";
         public static final String MAGABOND_CHOP = "magabondChop";
         public static final String MAGABOND_RECORD = "magabondRecord";
-        public static final String FANTAAVION_RECORD = "fantaAvionRecord";
+        //public static final String FANTAAVION_RECORD = "fantaAvionRecord";
         public static final String PYROBARBARE_RECORD = "pyroBarbareRecord";
         public static final String TOOTH_BRUSH = "toothBrush";
         public static final String STAMP_COLLECTION = "stampCollection";
@@ -29,6 +29,8 @@ public class Names {
         public static final String JEAN_KEVIN = "jeankevin";
         public static final String BOT = "botlennon";
     }
+
+    /*
 
     public class Achievements{
         public static final String INSTALL_MOD = "installMod";
@@ -47,5 +49,5 @@ public class Names {
         public static final String GET_MAGABOND_CHOP = "getMagabondChop";
         public static final String GET_FANTA_GLASSES = "getFantaGlasses";
 
-    }
+    }*/
 }
