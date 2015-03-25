@@ -27,7 +27,7 @@ public class ConfigurationHandler {
     }
 
     private static void loadConfiguration(){
-        isPyromaniac = configuration.getBoolean("isPyromaniac","Boblennon",true,"Is Bob Pyromaniac ?");
+        isPyromaniac = configuration.getBoolean("isPyromaniac","Boblennon",false,"Is Bob Pyromaniac ?");
         pyroRate = configuration.getInt("pyroRate", "Boblennon", 30, 0, 100, "Rate of Bob's pyro");
         isImmuneToFire = configuration.getBoolean("isImmuneToFire", "Boblennon", true, "Is Bob immune to fire ?");
         canBurnWool = configuration.getBoolean("canBurnWool","Boblennon",true,"Can Bob burn Wool ?");

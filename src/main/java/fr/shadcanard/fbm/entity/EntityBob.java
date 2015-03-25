@@ -18,13 +18,13 @@ public class EntityBob extends EntityCreature {
 
     protected boolean followed;
     private boolean hasPlayedBurnSound;
+    private boolean isImmuneToFire;
 
     public EntityBob(World world) {
         super(world);
         hasPlayedBurnSound = false;
-
+        isImmuneToFire = ConfigurationHandler.isImmuneToFire;
     }
-
 
     @Override
     protected void applyEntityAttributes() {
