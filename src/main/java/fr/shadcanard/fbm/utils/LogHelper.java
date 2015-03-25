@@ -2,6 +2,9 @@ package fr.shadcanard.fbm.utils;
 import cpw.mods.fml.common.FMLLog;
 import fr.shadcanard.fbm.references.Reference;
 import org.apache.logging.log4j.Level;
+
+
+@SuppressWarnings("UnusedDeclaration")
 public class LogHelper
 {
     public static void log(Level logLevel, Object object)

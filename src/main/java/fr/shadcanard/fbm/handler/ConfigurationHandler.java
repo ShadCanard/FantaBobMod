@@ -17,6 +17,7 @@ public class ConfigurationHandler {
     public static boolean canBurnPlants = true;
     public static boolean canBurnLeaves = true;
     public static boolean canBurnWood = true;
+    public static boolean onlyFantaBob = false;
 
     public static void init(File configFile){
         if(configuration == null){
@@ -26,14 +27,15 @@ public class ConfigurationHandler {
     }
 
     private static void loadConfiguration(){
-        isPyromaniac = configuration.getBoolean("isPyromaniac",Configuration.CATEGORY_GENERAL,true,"Is Bob Pyromaniac ?");
-        pyroRate = configuration.getInt("pyroRate", Configuration.CATEGORY_GENERAL, 30, 0, 100, "Rate of Bob's pyro");
-        isImmuneToFire = configuration.getBoolean("isImmuneToFire", Configuration.CATEGORY_GENERAL, true, "Is Bob immune to fire ?");
-        canBurnWool = configuration.getBoolean("canBurnWool",Configuration.CATEGORY_GENERAL,true,"Can Bob burn Wool ?");
-        canBurnTNT = configuration.getBoolean("canBurnTNT",Configuration.CATEGORY_GENERAL,true,"Can Bob burn TNT ?");
-        canBurnPlants = configuration.getBoolean("canBurnPlants",Configuration.CATEGORY_GENERAL,true,"Can Bob burn Plants ?");
-        canBurnLeaves = configuration.getBoolean("canBurnLeaves",Configuration.CATEGORY_GENERAL,true,"Can Bob burn Leaves ?");
-        canBurnWood = configuration.getBoolean("canBurnWood",Configuration.CATEGORY_GENERAL,true,"Can Bob burn Leaves ?");
+        isPyromaniac = configuration.getBoolean("isPyromaniac","Boblennon",true,"Is Bob Pyromaniac ?");
+        pyroRate = configuration.getInt("pyroRate", "Boblennon", 30, 0, 100, "Rate of Bob's pyro");
+        isImmuneToFire = configuration.getBoolean("isImmuneToFire", "Boblennon", true, "Is Bob immune to fire ?");
+        canBurnWool = configuration.getBoolean("canBurnWool","Boblennon",true,"Can Bob burn Wool ?");
+        canBurnTNT = configuration.getBoolean("canBurnTNT","Boblennon",true,"Can Bob burn TNT ?");
+        canBurnPlants = configuration.getBoolean("canBurnPlants","Boblennon",true,"Can Bob burn Plants ?");
+        canBurnLeaves = configuration.getBoolean("canBurnLeaves","Boblennon",true,"Can Bob burn Leaves ?");
+        canBurnWood = configuration.getBoolean("canBurnWood","Boblennon",true,"Can Bob burn Leaves ?");
+        onlyFantaBob = configuration.getBoolean("onlyFantaBob","General",false,"Is there only Fanta and Bob ?");
 
         if(configuration.hasChanged()){
             configuration.save();

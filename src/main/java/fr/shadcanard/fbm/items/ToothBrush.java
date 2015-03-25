@@ -4,7 +4,6 @@ import fr.shadcanard.fbm.references.Names;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
-import paulscode.sound.SoundSystem;
 
 public class ToothBrush extends ItemFBM {
     public ToothBrush(){

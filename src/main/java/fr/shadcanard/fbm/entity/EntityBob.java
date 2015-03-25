@@ -1,17 +1,14 @@
 package fr.shadcanard.fbm.entity;
 
-import fr.shadcanard.fbm.achievements.AchievementHandler;
 import fr.shadcanard.fbm.handler.ConfigurationHandler;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityCreature;
 import net.minecraft.entity.SharedMonsterAttributes;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.stats.Achievement;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 
@@ -44,7 +41,7 @@ public class EntityBob extends EntityCreature {
             if (target instanceof EntityJeanKevin) {
                 double distance = target.getDistance(posX, posY, posZ);
                 if (distance < 16 && ((EntityJeanKevin) target).canEntityBeSeen(this)) {
-                    return (EntityJeanKevin) target;
+                    return target;
                 }
             }
         }
@@ -138,11 +135,11 @@ public class EntityBob extends EntityCreature {
     public void onDeath(DamageSource damageSource) {
         super.onDeath(damageSource);
 
-        Entity assassin = damageSource.getEntity();
+        //Entity assassin = damageSource.getEntity();
 
-        if( assassin != null && assassin instanceof EntityPlayer){
+        //if( assassin != null && assassin instanceof EntityPlayer){
            // ((EntityPlayer)assassin).triggerAchievement(getKillAch());
-        }
+        //}
     }
 
     @Override

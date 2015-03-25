@@ -1,7 +1,7 @@
 package fr.shadcanard.fbm.entity;
 
-import fr.shadcanard.fbm.achievements.AchievementHandler;
 import fr.shadcanard.fbm.init.ModItems;
+
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityCreature;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -9,7 +9,6 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.stats.Achievement;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 
@@ -71,12 +70,12 @@ public class EntityJeanKevin extends EntityCreature {
 
     public void onDeath(DamageSource par1DamageSource)
     {
-        Entity assassin = par1DamageSource.getEntity();
+       // Entity assassin = par1DamageSource.getEntity();
 
-        if (assassin != null && assassin instanceof EntityPlayer)
-        {
+        //if (assassin != null && assassin instanceof EntityPlayer)
+        //{
            // ((EntityPlayer) assassin).triggerAchievement(getKillAch());
-        }
+        //}
 
         super.onDeath(par1DamageSource);
     }

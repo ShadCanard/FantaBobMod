@@ -5,6 +5,7 @@ import fr.shadcanard.fbm.entity.EntityBob;
 import fr.shadcanard.fbm.entity.EntityBot;
 import fr.shadcanard.fbm.entity.EntityFanta;
 import fr.shadcanard.fbm.entity.EntityJeanKevin;
+import fr.shadcanard.fbm.handler.ConfigurationHandler;
 import fr.shadcanard.fbm.renders.RenderBob;
 import fr.shadcanard.fbm.renders.RenderBot;
 import fr.shadcanard.fbm.renders.RenderFanta;
@@ -18,7 +19,7 @@ public class ClientProxy extends CommonProxy
     {
         RenderingRegistry.registerEntityRenderingHandler(EntityBob.class,new RenderBob(new ModelBiped(),0.5F));
         RenderingRegistry.registerEntityRenderingHandler(EntityFanta.class,new RenderFanta(new ModelBiped(),0.5F));
-        RenderingRegistry.registerEntityRenderingHandler(EntityJeanKevin.class,new RenderJeanKevin(new ModelBiped(),0.5F));
-        RenderingRegistry.registerEntityRenderingHandler(EntityBot.class, new RenderBot(new ModelBiped(), 0.5F));
+        if(!ConfigurationHandler.onlyFantaBob) RenderingRegistry.registerEntityRenderingHandler(EntityJeanKevin.class,new RenderJeanKevin(new ModelBiped(),0.5F));
+        if(!ConfigurationHandler.onlyFantaBob) RenderingRegistry.registerEntityRenderingHandler(EntityBot.class, new RenderBot(new ModelBiped(), 0.5F));
     }
 }
