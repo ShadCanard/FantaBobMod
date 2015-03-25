@@ -27,6 +27,8 @@ item.pyroBarbareRecord.desc=Bob - Chanson du Pyrobarbare
 ####Entities
 entity.boblennon.name=Boblennon
 entity.fanta.name=theFantasio974
+entity.botlennon.name=Botlennon
+entity.jeankevin.name=Jean-Kevin
 
 ####Achievements
 achievement.killFanta=Spirou

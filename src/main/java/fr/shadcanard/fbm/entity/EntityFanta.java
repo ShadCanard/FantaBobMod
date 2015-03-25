@@ -89,9 +89,9 @@ public class EntityFanta extends EntityCreature{
         return 1;
     }
 
-    public Achievement getKillAch(){
-        return AchievementHandler.killFantaAch;
-    }
+    //public Achievement getKillAch(){
+     //   return AchievementHandler.killFantaAch;
+   // }
 
     @Override
     public void onDeath(DamageSource damageSource) {
@@ -102,7 +102,7 @@ public class EntityFanta extends EntityCreature{
         Entity assassin = damageSource.getEntity();
 
         if(assassin != null && assassin instanceof EntityPlayer){
-            ((EntityPlayer)assassin).triggerAchievement(getKillAch());
+     //       ((EntityPlayer)assassin).triggerAchievement(getKillAch());
         }
         super.onDeath(damageSource);
     }

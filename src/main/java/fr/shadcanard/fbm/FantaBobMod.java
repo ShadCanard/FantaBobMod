@@ -11,6 +11,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
+import fr.shadcanard.fbm.achievements.AchievementHandler;
 import fr.shadcanard.fbm.blocks.BlockFBM;
 import fr.shadcanard.fbm.creativeTab.FBMTabs;
 import fr.shadcanard.fbm.handler.CraftingHandler;
@@ -44,6 +45,7 @@ public class FantaBobMod {
         ModEntities.init();
         proxy.registerRender();
         CraftingHandler.init();
+        //AchievementHandler.init();
 
         LogHelper.info("Pre Initialization Complete !");
     }

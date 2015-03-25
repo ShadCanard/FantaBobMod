@@ -8,7 +8,9 @@ import net.minecraft.entity.EntityCreature;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.stats.Achievement;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
@@ -120,9 +122,10 @@ public class EntityBob extends EntityCreature {
         }
     }
 
+/*
     public Achievement getKillAch() {
         return AchievementHandler.killBobAch;
-    }
+    }*/
 
     @Override
     public boolean attackEntityFrom(DamageSource source, float par2) {
@@ -138,7 +141,7 @@ public class EntityBob extends EntityCreature {
         Entity assassin = damageSource.getEntity();
 
         if( assassin != null && assassin instanceof EntityPlayer){
-            ((EntityPlayer)assassin).triggerAchievement(getKillAch());
+           // ((EntityPlayer)assassin).triggerAchievement(getKillAch());
         }
     }
 
@@ -147,6 +150,11 @@ public class EntityBob extends EntityCreature {
         if (getLivingSound() != null) {
             worldObj.playSoundAtEntity(this,getLivingSound(),getSoundVolume(),1.0F);
         }
+    }
+
+    @Override
+    public ItemStack getHeldItem() {
+        return new ItemStack(Items.golden_sword);
     }
 
     @Override

@@ -190,5 +190,14 @@
       },
       "mob/kevin/hurt"
     ]
+  },
+  "items.brushSound": {
+    "category": "block",
+    "replace": true,
+    "sounds": [
+      {
+        "name": "items.brushSound",
+        "type": "event"
+      }]
   }
 }

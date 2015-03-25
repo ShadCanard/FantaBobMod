@@ -36,7 +36,7 @@ public class EntityJeanKevin extends EntityCreature {
         EntityPlayer var1 = this.worldObj.getClosestVulnerablePlayerToEntity(this, 16.0D);
         if (var1 != null && this.canEntityBeSeen(var1))
         {
-            var1.triggerAchievement(AchievementHandler.floodAch);
+            //var1.triggerAchievement(AchievementHandler.floodAch);
             return var1;
         }
 
@@ -64,10 +64,10 @@ public class EntityJeanKevin extends EntityCreature {
         return "fbm:mob.kevin.idle";
     }
 
-    public Achievement getKillAch()
-    {
-        return AchievementHandler.killJeanKevinAch;
-    }
+//    public Achievement getKillAch()
+//    {
+//        return AchievementHandler.killJeanKevinAch;
+//    }
 
     public void onDeath(DamageSource par1DamageSource)
     {
@@ -75,7 +75,7 @@ public class EntityJeanKevin extends EntityCreature {
 
         if (assassin != null && assassin instanceof EntityPlayer)
         {
-            ((EntityPlayer) assassin).triggerAchievement(getKillAch());
+           // ((EntityPlayer) assassin).triggerAchievement(getKillAch());
         }
 
         super.onDeath(par1DamageSource);

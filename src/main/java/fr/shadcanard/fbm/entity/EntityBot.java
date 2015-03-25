@@ -50,7 +50,7 @@ public class EntityBot extends EntityMob{
         Entity assassin = p_70645_1_.getEntity();
         if(assassin != null && assassin instanceof EntityPlayer)
         {
-            ((EntityPlayer)assassin).triggerAchievement(AchievementHandler.killBotlennonAch);
+            //((EntityPlayer)assassin).triggerAchievement(AchievementHandler.killBotlennonAch);
         }
     }
 
