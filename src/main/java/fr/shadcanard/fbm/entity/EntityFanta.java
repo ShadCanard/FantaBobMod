@@ -1,14 +1,11 @@
 package fr.shadcanard.fbm.entity;
 
-import fr.shadcanard.fbm.achievements.AchievementHandler;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityCreature;
 import net.minecraft.entity.SharedMonsterAttributes;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.stats.Achievement;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 
@@ -48,7 +45,7 @@ public class EntityFanta extends EntityCreature{
             if(worldObj.loadedEntityList.get(i) instanceof EntityBob){
                 EntityBob target = (EntityBob) worldObj.loadedEntityList.get(i);
                 double distance = target.getDistance(posX,posY,posZ);
-                if (distance <= detectionRadius && distance >= rejoinRadius && ((EntityBob) target).canEntityBeSeen(this)){
+                if (distance <= detectionRadius && distance >= rejoinRadius && target.canEntityBeSeen(this)){
                     if(!target.isFollowed()) target.setFollowed(true);
                     return target;
                 }
@@ -99,11 +96,13 @@ public class EntityFanta extends EntityCreature{
             ((EntityBob) entityToAttack).setFollowed(false);
         }
 
+/*
         Entity assassin = damageSource.getEntity();
 
         if(assassin != null && assassin instanceof EntityPlayer){
-     //       ((EntityPlayer)assassin).triggerAchievement(getKillAch());
+            ((EntityPlayer)assassin).triggerAchievement(getKillAch());
         }
+*/
         super.onDeath(damageSource);
     }
 
