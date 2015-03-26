@@ -22,13 +22,22 @@ public class ModItems {
         stampCollection = new StampCollection();
 
         GameRegistry.registerItem(pyroAxe, Names.Items.PYROBARBARE_AXE);
+        System.out.println(pyroAxe);
         GameRegistry.registerItem(bobAxe, Names.Items.BOB_AXE);
+        System.out.println(bobAxe);
         GameRegistry.registerItem(record_magabondMix,Names.Items.MAGABOND_RECORD);
+        System.out.println(record_magabondMix);
         GameRegistry.registerItem(record_Avion,Names.Items.AVION_RECORD);
+        System.out.println(record_Avion);
         GameRegistry.registerItem(record_pyrobarbare,Names.Items.PYROBARBARE_RECORD);
+        System.out.println(record_pyrobarbare);
         GameRegistry.registerItem(bambooSword, Names.Items.BAMBOO_SWORD);
+        System.out.println(bambooSword);
         GameRegistry.registerItem(magabondChop, Names.Items.MAGABOND_CHOP);
+        System.out.println(magabondChop);
         GameRegistry.registerItem(toothBrush, Names.Items.TOOTH_BRUSH);
+        System.out.println(toothBrush);
         GameRegistry.registerItem(stampCollection, Names.Items.STAMP_COLLECTION);
+        System.out.println(stampCollection);
     }
 }

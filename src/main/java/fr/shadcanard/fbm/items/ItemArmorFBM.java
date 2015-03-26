@@ -10,12 +10,21 @@ import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 
 public class ItemArmorFBM extends ItemArmor {
+
+    public final String name;
+
     public ItemArmorFBM(int type, String name) {
         super(ModArmor.armorFBM, 0, type);
         setUnlocalizedName(name);
+        this.name = name;
         setTextureName(Reference.MOD_ID + ":" + name);
         setCreativeTab(FantaBobMod.fbmCreativeTabs);
 
+    }
+
+    @Override
+    public String toString() {
+        return Reference.MOD_ID + ":" + this.name;
     }
 
     @Override

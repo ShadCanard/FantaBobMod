@@ -2,6 +2,7 @@ package fr.shadcanard.fbm.items;
 
 
 import fr.shadcanard.fbm.FantaBobMod;
+import fr.shadcanard.fbm.references.Names;
 import fr.shadcanard.fbm.references.Reference;
 import net.minecraft.block.BlockJukebox;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -42,6 +43,11 @@ public class MusicDisc extends ItemRecord
         records.put(recordName, this);
     }
 
+
+    @Override
+    public String toString() {
+        return Reference.MOD_ID + ":" + this.recordName;
+    }
 
     @Override
     public void registerIcons(IIconRegister iconRegister)
