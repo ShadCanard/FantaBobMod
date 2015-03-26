@@ -51,11 +51,6 @@ public class EntityBob extends EntityCreature {
     protected void attackEntity(Entity entity, float f) {
         if (attackTime <= 0 && f < 2.0F && entity.boundingBox.maxY > boundingBox.minY && entity.boundingBox.minY < boundingBox.maxY) {
             attackTime = 20;
-            Material material = worldObj.getBlock((int) entity.posX, (int) entity.posY, (int) entity.posZ).getMaterial();
-            if (material == Material.air && ConfigurationHandler.isPyromaniac) {
-                worldObj.setBlock((int) entity.posX, (int) entity.posY, (int) entity.posZ, Blocks.fire, 0, 2);
-                worldObj.playSoundAtEntity(this, getBurnSound(), getSoundVolume(), 1.0F);
-            } else
                 attackEntityAsMob(entity);
         }
     }
