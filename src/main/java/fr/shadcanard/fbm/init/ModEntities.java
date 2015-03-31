@@ -2,10 +2,7 @@ package fr.shadcanard.fbm.init;
 
 import cpw.mods.fml.common.registry.EntityRegistry;
 import fr.shadcanard.fbm.FantaBobMod;
-import fr.shadcanard.fbm.entity.EntityBob;
-import fr.shadcanard.fbm.entity.EntityBot;
-import fr.shadcanard.fbm.entity.EntityFanta;
-import fr.shadcanard.fbm.entity.EntityJeanKevin;
+import fr.shadcanard.fbm.entity.*;
 import fr.shadcanard.fbm.handler.ConfigurationHandler;
 import fr.shadcanard.fbm.references.Names;
 
@@ -20,6 +17,10 @@ public class ModEntities {
 
         EntityRegistry.registerGlobalEntityID(EntityFanta.class,Names.Entities.FANTA, EntityRegistry.findGlobalUniqueEntityId(), new Color(0,0,230).getRGB(), new Color(0,0,0).getRGB());
         EntityRegistry.registerModEntity(EntityFanta.class, Names.Entities.FANTA, EntityRegistry.findGlobalUniqueEntityId(), FantaBobMod.instance, 40, 1, true);
+
+        EntityRegistry.registerGlobalEntityID(EntityBossLennon.class, Names.Entities.BOSS, EntityRegistry.findGlobalUniqueEntityId(), new Color(255, 182, 90).getRGB(), new Color(180, 0, 0).getRGB());
+        EntityRegistry.registerModEntity(EntityBossLennon.class, Names.Entities.BOSS, EntityRegistry.findGlobalUniqueEntityId(), FantaBobMod.instance, 40, 1, true);
+
 
         if(!ConfigurationHandler.onlyFantaBob) EntityRegistry.registerGlobalEntityID(EntityJeanKevin.class, Names.Entities.JEAN_KEVIN, EntityRegistry.findGlobalUniqueEntityId(), new Color(50, 210, 150).getRGB(), new Color(50, 50, 255).getRGB());
         if(!ConfigurationHandler.onlyFantaBob) EntityRegistry.registerModEntity(EntityJeanKevin.class, Names.Entities.JEAN_KEVIN, EntityRegistry.findGlobalUniqueEntityId(), FantaBobMod.instance,40,1,true);

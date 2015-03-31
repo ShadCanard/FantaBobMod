@@ -28,6 +28,7 @@ public class Names {
         public static final String FANTA = "fanta";
         public static final String JEAN_KEVIN = "jeankevin";
         public static final String BOT = "botlennon";
+        public static final String BOSS = "bosslennon";
     }
 
     /*
