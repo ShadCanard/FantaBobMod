@@ -28,5 +28,10 @@ public class CraftingHandler {
         GameRegistry.addRecipe(new ItemStack(ModItems.record_magabondMix)," x ","xyx"," x ",'y', ModItems.magabondChop, 'x', new ItemStack(Blocks.coal_block));
         GameRegistry.addRecipe(new ItemStack(ModItems.record_pyrobarbare,1)," x ","xyx", " x ", 'x', Blocks.coal_block, 'y', ModItems.bobAxe);
         GameRegistry.addRecipe(new ItemStack(ModItems.record_Avion,1)," x ","xyx", " x ", 'x', new ItemStack(Blocks.coal_block), 'y', new ItemStack(ModArmor.fantaGlasses));
+        GameRegistry.addRecipe(new ItemStack(Items.saddle), "xxx","x x","y y", 'x', Items.leather, 'y', new ItemStack(Blocks.iron_block));
+        GameRegistry.addRecipe(new ItemStack(Items.diamond_horse_armor), "  x","xxx","x x", 'x', new ItemStack(Blocks.diamond_block));
+        GameRegistry.addRecipe(new ItemStack(Items.golden_horse_armor), "  x","xxx","x x", 'x', new ItemStack(Blocks.gold_block));
+        GameRegistry.addRecipe(new ItemStack(Items.iron_horse_armor), "  x","xxx","x x", 'x', new ItemStack(Blocks.iron_block));
+        GameRegistry.addRecipe(new ItemStack(Items.iron_horse_armor), "  x","xxx","x x", 'x', new ItemStack(Blocks.iron_block));
     }
 }

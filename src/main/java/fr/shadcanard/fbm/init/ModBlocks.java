@@ -10,5 +10,6 @@ public class ModBlocks {
     public static void init() {
 
         GameRegistry.registerBlock(blockBouze, Names.Blocks.BLOCK_BOUZE);
+        System.out.println(blockBouze);
     }
 }

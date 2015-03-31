@@ -8,7 +8,7 @@ import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraftforge.common.util.EnumHelper;
 
 public class ModArmor {
-    public static Item fantaGlasses, cobbleTie, hairPotion;
+    public static ItemArmorFBM fantaGlasses, cobbleTie, hairPotion;
     public static ArmorMaterial armorFBM;
 
     public static void init(){
@@ -21,6 +21,6 @@ public class ModArmor {
 
         GameRegistry.registerItem(fantaGlasses, Names.Items.FANTA_GLASSES);
         GameRegistry.registerItem(cobbleTie, Names.Items.COBBLE_TIE);
-        GameRegistry.registerItem(hairPotion,Names.Items.HAIR_POTION);
+        GameRegistry.registerItem(hairPotion, Names.Items.HAIR_POTION);
     }
 }

@@ -13,4 +13,9 @@ public class BobAxe extends ItemSword {
         this.setTextureName(Reference.MOD_ID + ":" + Names.Items.BOB_AXE);
         setCreativeTab(FantaBobMod.fbmCreativeTabs);
     }
+
+    @Override
+    public String toString() {
+        return Reference.MOD_ID + ":" + Names.Items.BOB_AXE;
+    }
 }

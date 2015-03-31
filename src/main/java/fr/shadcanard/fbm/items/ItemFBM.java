@@ -10,11 +10,17 @@ import net.minecraft.item.ItemStack;
 
 public class ItemFBM extends Item {
 
-
+    public static String name;
     public ItemFBM(){
         super();
         this.setCreativeTab(FantaBobMod.fbmCreativeTabs);
     }
+
+    @Override
+    public String toString() {
+        return Reference.MOD_ID + ":" + this.name;
+    }
+
 
     @Override
     public String getUnlocalizedName()

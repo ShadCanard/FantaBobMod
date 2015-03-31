@@ -19,6 +19,11 @@ public class PyroAxe extends ItemSword {
     }
 
     @Override
+    public String toString() {
+        return Reference.MOD_ID + ":" + Names.Items.PYROBARBARE_AXE;
+    }
+
+    @Override
     public boolean hasEffect(ItemStack par1ItemStack, int pass) {
         return true;
     }
