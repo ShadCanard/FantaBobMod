@@ -66,4 +66,8 @@ public class EntityBot extends EntityMob{
         }
         super.onLivingUpdate();
     }
+
+    public static EntityBot createInstance(World world) {
+        return new EntityBot(world);
+    }
 }

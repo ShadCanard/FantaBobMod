@@ -6,11 +6,15 @@ import fr.shadcanard.fbm.references.Names;
 import net.minecraft.item.Item;
 
 public class ModItems {
+
+    //Declaration
     public static ItemFBM magabondChop, magabondRecord, toothBrush, stampCollection;
     public static Item record_Avion, record_pyrobarbare, record_magabondMix, bobAxe, bambooSword, pyroAxe;
 
     public static void init() {
 
+
+        //Objects
         pyroAxe = new PyroAxe(Item.ToolMaterial.EMERALD);
         bobAxe = new BobAxe(Item.ToolMaterial.EMERALD).setUnlocalizedName(Names.Items.BOB_AXE);
         record_pyrobarbare = new MusicDisc("pyroBarbare").setUnlocalizedName(Names.Items.PYROBARBARE_RECORD);
@@ -21,6 +25,7 @@ public class ModItems {
         toothBrush = new ToothBrush();
         stampCollection = new StampCollection();
 
+        //Registry
         GameRegistry.registerItem(pyroAxe, Names.Items.PYROBARBARE_AXE);
         System.out.println(pyroAxe);
         GameRegistry.registerItem(bobAxe, Names.Items.BOB_AXE);

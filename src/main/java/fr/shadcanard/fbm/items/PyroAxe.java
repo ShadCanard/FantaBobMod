@@ -1,8 +1,11 @@
 package fr.shadcanard.fbm.items;
 
 import fr.shadcanard.fbm.FantaBobMod;
+import fr.shadcanard.fbm.entity.EntityBob;
+import fr.shadcanard.fbm.entity.EntityBot;
 import fr.shadcanard.fbm.references.Names;
 import fr.shadcanard.fbm.references.Reference;
+import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
@@ -28,14 +31,10 @@ public class PyroAxe extends ItemSword {
         return true;
     }
 
-    @Override
-    public ItemStack onItemRightClick(ItemStack p_77659_1_, World p_77659_2_, EntityPlayer p_77659_3_) {
-
-        return new ItemStack(this);
-    }
 
     @Override
     public boolean onEntityItemUpdate(EntityItem entityItem) {
         return super.onEntityItemUpdate(entityItem);
     }
+
 }

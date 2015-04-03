@@ -20,7 +20,7 @@ public class CraftingHandler {
         GameRegistry.addShapedRecipe(pyroAxeEnchanted, "xxx","xyx","xxx",'x',new ItemStack(Items.flint_and_steel), 'y', new ItemStack(ModItems.bobAxe));
         GameRegistry.addShapedRecipe(new ItemStack(ModItems.bambooSword, 1), "x", "x", "y", 'y', Items.stick, 'x', new ItemStack(Items.reeds));
         GameRegistry.addShapedRecipe(new ItemStack(ModItems.bobAxe, 1), "xxx", "xyx", " y ", 'x', Items.diamond, 'y', Items.stick);
-        GameRegistry.addRecipe(new ItemStack(ModArmor.cobbleTie,1), " y "," x "," x ", 'y',Items.string, 'x',new ItemStack(Blocks.cobblestone));
+        GameRegistry.addRecipe(new ItemStack(ModArmor.cobbleTie,1), "y","x","x", 'y',Items.string, 'x',new ItemStack(Blocks.cobblestone));
         GameRegistry.addRecipe(new ItemStack(ModItems.toothBrush), "x  ","yyy",'x', new ItemStack(Blocks.obsidian), 'y',new ItemStack(Blocks.wool));
         GameRegistry.addRecipe(new ItemStack(ModItems.stampCollection),"xyy","xyy","xyy", 'x', Items.leather, 'y', Items.paper);
         GameRegistry.addRecipe(new ItemStack(ModArmor.hairPotion,1), " x ", "xyx"," x ",'x',new ItemStack(Blocks.glass),'y',ModItems.magabondChop);
