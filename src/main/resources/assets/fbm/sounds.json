@@ -254,13 +254,27 @@
       "fbm:mob/femme/milk"
     ]
   },
-  "items.brushSound": {
+  "sounds.brushSound": {
     "category": "block",
     "replace": true,
     "sounds": [
       {
-        "name": "fbm:items/brushSound",
+        "name": "sounds.brushSound",
         "type": "event"
-      }]
-  }
+      },
+      "fbm:sounds/brushSound"
+    ]
+  },
+  "sounds.bouze.walk": {
+  "category": "block",
+  "replace": true,
+  "sounds": [
+    {
+      "name": "bouze.walk",
+      "type": "event"
+    },
+      "fbm:sounds/bouze/walk1",
+      "fbm:sounds/bouze/walk2"
+  ]
+}
 }

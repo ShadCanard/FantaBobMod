@@ -19,7 +19,7 @@ public class CraftingHandler {
         GameRegistry.addShapedRecipe(new ItemStack(ModItems.bambooSword, 1), "x", "x", "y", 'y', Items.STICK, 'x', new ItemStack(Items.REEDS));
         GameRegistry.addShapedRecipe(new ItemStack(ModItems.bobAxe, 1), "xxx", "xyx", " y ", 'x', Items.DIAMOND, 'y', Items.STICK);
         GameRegistry.addRecipe(new ItemStack(ModArmor.cobbleTie,1), " y "," x "," x ", 'y',Items.STRING, 'x',new ItemStack(Blocks.COBBLESTONE));
-        GameRegistry.addRecipe(new ItemStack(ModItems.toothBrush), "x  ","yyy",'x', new ItemStack(Blocks.OBSIDIAN), 'y',new ItemStack(Blocks.WOOL));
+        GameRegistry.addRecipe(new ItemStack(ModItems.toothBrush), "x  ","yyy",'x', new ItemStack(Blocks.WOOL), 'y',new ItemStack(Blocks.OBSIDIAN));
         GameRegistry.addRecipe(new ItemStack(ModItems.stampCollection),"xyy","xyy","xyy", 'x', Items.LEATHER, 'y', Items.PAPER);
         GameRegistry.addRecipe(new ItemStack(ModArmor.hairPotion,1), " x ", "xyx"," x ",'x',new ItemStack(Blocks.GLASS),'y',ModItems.magabondChop);
         GameRegistry.addRecipe(new ItemStack(ModArmor.fantaGlasses, 1), "y y", "y y", "xyx",'x',new ItemStack(Blocks.GLASS_PANE), 'y', Items.STICK);

@@ -72,15 +72,4 @@ public class EntityBot extends EntityMob{
 
         super.onDeath(source);
     }
-
-    @Override
-    public void onLivingUpdate() {
-        if(this.worldObj.isDaytime() && !this.worldObj.isRemote){
-            float var1 = this.getBrightness(1.0F);
-            if((var1 > 0.5F) && (this.worldObj.canSeeSky(new BlockPos(posX,posY,posZ)))){
-                this.setFire(8);
-            }
-        }
-        super.onLivingUpdate();
-    }
 }
