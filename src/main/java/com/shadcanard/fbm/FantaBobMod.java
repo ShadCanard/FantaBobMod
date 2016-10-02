@@ -1,7 +1,3 @@
-//TODO: Terminer les items (donner nom, vérifier textures)
-//TODO : Terminer Entités (Register, Render, Proxy)
-//TODO : S'occuper des sons.
-
 
 package com.shadcanard.fbm;
 

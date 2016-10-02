@@ -49,7 +49,6 @@ public class MusicDisc extends ItemRecord implements IItemModelProvider
 
 
     @Override
-    //TODO: getRecordTitle()
     public String getRecordNameLocal()
     {
         return I18n.translateToLocal(this.getUnlocalizedName() + ".desc");
