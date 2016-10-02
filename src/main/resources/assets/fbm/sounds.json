@@ -2,7 +2,7 @@
   "records.fantaAvion":{
     "sounds":[
       {
-        "name":"records/fantaAvion",
+        "name":"fbm:records/fantaAvion",
         "stream":true
       }
     ]
@@ -12,7 +12,17 @@
   {
     "sounds": [
       {
-        "name":"records/pyroBarbare",
+        "name":"fbm:records/pyroBarbare",
+        "stream":true
+      }
+    ]
+  ,"category":"record"
+  },
+  "records.metalleux":
+  {
+    "sounds": [
+      {
+        "name":"fbm:records/metalleux",
         "stream":true
       }
     ]
@@ -22,7 +32,7 @@
   {
     "sounds": [
       {
-        "name":"records/magabondMix",
+        "name":"fbm:records/magabondMix",
         "stream":true
       }
     ]
@@ -37,11 +47,11 @@
         "type": "event",
         "weight": 6
       },
-      "mob/bob/hurt1",
-      "mob/bob/hurt2",
-      "mob/bob/hurt3",
-      "mob/bob/hurt4",
-      "mob/bob/hurt5"
+      "fbm:mob/bob/hurt1",
+      "fbm:mob/bob/hurt2",
+      "fbm:mob/bob/hurt3",
+      "fbm:mob/bob/hurt4",
+      "fbm:mob/bob/hurt5"
     ]
   },
   "mob.bob.death": {
@@ -53,10 +63,10 @@
         "type": "event",
         "weight": 4
       },
-      "mob/bob/death1",
-      "mob/bob/death2",
-      "mob/bob/death3",
-      "mob/bob/death4"
+      "fbm:mob/bob/death1",
+      "fbm:mob/bob/death2",
+      "fbm:mob/bob/death3",
+      "fbm:mob/bob/death4"
     ]
   },
   "mob.bob.idle": {
@@ -68,17 +78,17 @@
       "type": "event",
       "weight": 4
     },
-    "mob/bob/idle1",
-    "mob/bob/idle2",
-    "mob/bob/idle3",
-    "mob/bob/idle4",
-    "mob/bob/idle5",
-    "mob/bob/idle6",
-    "mob/bob/idle7",
-    "mob/bob/idle8",
-    "mob/bob/idle9",
-    "mob/bob/idle10",
-    "mob/bob/idle11"
+    "fbm:mob/bob/idle1",
+    "fbm:mob/bob/idle2",
+    "fbm:mob/bob/idle3",
+    "fbm:mob/bob/idle4",
+    "fbm:mob/bob/idle5",
+    "fbm:mob/bob/idle6",
+    "fbm:mob/bob/idle7",
+    "fbm:mob/bob/idle8",
+    "fbm:mob/bob/idle9",
+    "fbm:mob/bob/idle10",
+    "fbm:mob/bob/idle11"
   ]
 },
   "mob.bob.burn": {
@@ -91,8 +101,8 @@
         "weight": 4
       },
 
-      "mob/bob/burn1",
-      "mob/bob/burn2"
+      "fbm:mob/bob/burn1",
+      "fbm:mob/bob/burn2"
     ]
   },
   "mob.fanta.death": {
@@ -104,10 +114,10 @@
         "type": "event",
         "weight": 4
       },
-      "mob/fanta/death1",
-      "mob/fanta/death2",
-      "mob/fanta/death3",
-      "mob/fanta/death4"
+      "fbm:mob/fanta/death1",
+      "fbm:mob/fanta/death2",
+      "fbm:mob/fanta/death3",
+      "fbm:mob/fanta/death4"
     ]
   },
   "mob.fanta.idle": {
@@ -119,10 +129,10 @@
         "type": "event",
         "weight": 4
       },
-      "mob/fanta/idle1",
-      "mob/fanta/idle2",
-      "mob/fanta/idle3",
-      "mob/fanta/idle4"
+      "fbm:mob/fanta/idle1",
+      "fbm:mob/fanta/idle2",
+      "fbm:mob/fanta/idle3",
+      "fbm:mob/fanta/idle4"
     ]
   },
   "mob.fanta.hurt": {
@@ -134,8 +144,8 @@
         "type": "event",
         "weight": 4
       },
-      "mob/fanta/hurt1",
-      "mob/fanta/hurt2"
+      "fbm:mob/fanta/hurt1",
+      "fbm:mob/fanta/hurt2"
     ]
   },
   "mob.bot.idle": {
@@ -147,10 +157,10 @@
         "type": "event",
         "weight": 4
       },
-      "mob/bot/idle1",
-      "mob/bot/idle2",
-      "mob/bot/idle3",
-      "mob/bot/idle4"
+      "fbm:mob/bot/idle1",
+      "fbm:mob/bot/idle2",
+      "fbm:mob/bot/idle3",
+      "fbm:mob/bot/idle4"
     ]
   },
   "mob.kevin.idle": {
@@ -162,9 +172,9 @@
         "type": "event",
         "weight": 4
       },
-      "mob/kevin/idle1",
-      "mob/kevin/idle2",
-      "mob/kevin/idle3"
+      "fbm:mob/kevin/idle1",
+      "fbm:mob/kevin/idle2",
+      "fbm:mob/kevin/idle3"
     ]
   },
   "mob.kevin.death": {
@@ -176,7 +186,7 @@
         "type": "event",
         "weight": 4
       },
-      "mob/kevin/death"
+      "fbm:mob/kevin/death"
     ]
   },
   "mob.kevin.hurt": {
@@ -188,7 +198,60 @@
         "type": "event",
         "weight": 4
       },
-      "mob/kevin/hurt"
+      "fbm:mob/kevin/hurt"
+    ]
+  },
+  "mob.femme.idle": {
+    "category": "neutral",
+    "replace": true,
+    "sounds": [
+      {
+        "name": "femme.idle",
+        "type": "event",
+        "weight": 4
+      },
+      "fbm:mob/femme/idle"
+    ]
+  },
+  "mob.femme.death": {
+    "category": "neutral",
+    "replace": true,
+    "sounds": [
+      {
+        "name": "femme.death",
+        "type": "event",
+        "weight": 4
+      },
+      "fbm:mob/femme/death1",
+      "fbm:mob/femme/death2",
+      "fbm:mob/femme/death3"
+    ]
+  },
+  "mob.femme.hurt": {
+    "category": "neutral",
+    "replace": true,
+    "sounds": [
+      {
+        "name": "femme.hurt",
+        "type": "event",
+        "weight": 4
+      },
+      "fbm:mob/femme/hurt1",
+      "fbm:mob/femme/hurt2",
+      "fbm:mob/femme/hurt3",
+      "fbm:mob/femme/hurt4"
+    ]
+  },
+  "mob.femme.milk": {
+    "category": "neutral",
+    "replace": true,
+    "sounds": [
+      {
+        "name": "femme.milk",
+        "type": "event",
+        "weight": 4
+      },
+      "fbm:mob/femme/milk"
     ]
   },
   "items.brushSound": {
@@ -196,7 +259,7 @@
     "replace": true,
     "sounds": [
       {
-        "name": "items.brushSound",
+        "name": "fbm:items/brushSound",
         "type": "event"
       }]
   }

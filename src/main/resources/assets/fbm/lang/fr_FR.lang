@@ -2,33 +2,61 @@
 itemGroup.fbm=FantaBobMod !
 
 ####Blocks
-tile.fbm:blockBouze.name=Bloc de bouse
+tile.blockBouze.name=Bloc de bouse
 
 ####Items
 item.bambooSword.name=Epée en bambou
 item.hairPotion.name=Potion capilaire
-item.fbm:magabondChop.name=Morceau de magabond
-item.fbm:toothBrush.name=Brosse à dents
-item.fbm:stampCollection.name=Collection de timbres
+item.magabondChop.name=Morceau de magabond
+item.toothBrush.name=Brosse à dents
+item.stampCollection.name=Collection de timbres
 item.fantaGlasses.name=Lunettes de Fanta
 item.cobbleTie.name= Cravatte en cobblestone
 item.bobAxe.name=Hache de Barbare
 item.pyroAxe.name=Hache de PyroBarbare
 item.pyroAxe.desc=La hache du Pyro-Pyro !
+item.SoundBox.name=SoundBox
+item.mamelouBucket.name=Seau de Mamelou
+item.itemArgent.name=Argent des abonnés
+item.mamelouCheese.name="Le Mamelou"
+
+####Cosplay Fanta
+item.fantaHead.name=Tête de Fanta
+item.fantaChest.name=Torse de Fanta
+item.fantaLegs.name=Jambes de Fanta
+item.fantaBoots.name=Pieds de Fanta
+
+#### Cosplay Bob
+item.bobHead.name=Tête de Bob
+item.bobChest.name=Torse de Bob
+item.bobLegs.name=Jambes de Bob
+item.bobBoots.name=Pieds de Bob
+
+
+#### Clementine
+item.clementine.name=Clementine
+item.bodyGuitar.name=Corps de Clementine
+item.headGuitar.name=Tete de Clementine
+item.guitarTop.name=Clefs de Clementine
+item.stringsGuitar.name=Cordes de Clementine
 
 #### Music Disks
 item.avionRecord.name=Disque
 item.magabondRecord.name=Disque
 item.pyroBarbareRecord.name=Disque
+item.metalleux.name=Disque
 item.avionRecord.desc=Fanta - Dans mon avion
 item.magabondRecord.desc=Bob - MagabondMix
+item.metalleux.desc=Bob & Seb - Les Metalleux
 item.pyroBarbareRecord.desc=Bob - Chanson du Pyrobarbare
 
 ####Entities
-entity.boblennon.name=Boblennon
-entity.fanta.name=theFantasio974
-entity.botlennon.name=Botlennon
-entity.jeankevin.name=Jean-Kevin
+entity.fbm.boblennon.name=Boblennon
+entity.fbm.fanta.name=theFantasio974
+entity.fbm.botlennon.name=Botlennon
+entity.fbm.jeankevin.name=Jean-Kevin
+entity.fbm.bosslennon.name=BossLennon
+entity.fbm.bonneFemme.name=Bonne Femme
 
 ####Achievements
 achievement.killFanta=Spirou

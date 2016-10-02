@@ -4,3 +4,7 @@ eclipse
 FantaBobMod.ipr
 FantaBobMod.iml
 FantaBobMod.iws
+/.idea/
+/.gradle/
+/gradle/
+/run/
