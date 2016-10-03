@@ -1,5 +1,6 @@
 package com.shadcanard.fbm.blocks;
 
+import com.shadcanard.fbm.items.IItemModelProvider;
 import com.shadcanard.fbm.references.Names;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.tileentity.TileEntity;
