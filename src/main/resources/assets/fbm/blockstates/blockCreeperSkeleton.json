@@ -1,5 +1,6 @@
 {
   "variants": {
-    "normal": { "model": "fbm:blockCreeperSkeleton" }
+    "normal": { "model": "fbm:creeperSkeleton" }
   }
 }
+
