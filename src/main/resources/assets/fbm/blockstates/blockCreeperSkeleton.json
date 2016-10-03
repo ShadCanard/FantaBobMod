@@ -1,6 +1,26 @@
 {
+  "forge_marker": 1,
+  "defaults": {
+    "model": "fbm:creeperSkeleton"
+  },
   "variants": {
-    "normal": { "model": "fbm:creeperSkeleton" }
-  }
+    "facing=north": {
+      "model": "fbm:creeperSkeleton"
+    },
+    "facing=south": {
+      "model": "fbm:creeperSkeleton",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "fbm:creeperSkeleton",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "fbm:creeperSkeleton",
+      "y": -90
+    }
+  },
+  "inventory": [
+    {}
+  ]
 }
-
