@@ -3,7 +3,7 @@ itemGroup.fbm=FantaBobMod !
 
 ####Blocks
 tile.blockBouze.name=Bloc de bouse
-
+tile.blockCreeperSkeleton.name=Squelette de Creeper
 ####Items
 item.bambooSword.name=Epée en bambou
 item.hairPotion.name=Potion capilaire

@@ -3,6 +3,7 @@ itemGroup.fbm=FantaBobMod !
 
 ####Blocks
 tile.blockBouze.name=Crap Block
+tile.blockCreeperSkeleton.name=Creeper's skeleton
 
 ####Items
 item.bambooSword.name=Bamboo Sword
