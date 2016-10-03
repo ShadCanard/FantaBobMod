@@ -31,6 +31,5 @@ public class BlockFBM extends Block implements IItemModelProvider {
     @Override
     public void registerItemModel(Item itemBlock) {
         FantaBobMod.proxy.registerItemRenderer(itemBlock, 0, name);
-
     }
 }

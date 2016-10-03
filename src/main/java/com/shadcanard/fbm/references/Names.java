@@ -4,6 +4,7 @@ public class Names {
 
     public class Blocks{
         public static final String BLOCK_BOUZE = "blockBouze";
+        public static final java.lang.String BLOCK_CREEPER = "blockCreeperSkeleton";
     }
 
     public class Items{
