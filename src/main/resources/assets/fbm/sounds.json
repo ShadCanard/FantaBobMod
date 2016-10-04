@@ -1,42 +1,51 @@
 {
-  "records.fantaAvion":{
-    "sounds":[
-      {
-        "name":"fbm:records/fantaAvion",
-        "stream":true
-      }
-    ]
-  ,"category":"record"
-  },
-  "records.pyroBarbare":
-  {
+  "records.fantaAvion": {
     "sounds": [
       {
-        "name":"fbm:records/pyroBarbare",
-        "stream":true
+        "name": "fbm:records/fantaAvion",
+        "stream": true
       }
-    ]
-  ,"category":"record"
+    ],
+    "category": "record"
   },
-  "records.metalleux":
-  {
+  "records.pyroBarbare": {
     "sounds": [
       {
-        "name":"fbm:records/metalleux",
-        "stream":true
+        "name": "fbm:records/pyroBarbare",
+        "stream": true
       }
-    ]
-  ,"category":"record"
+    ],
+    "category": "record"
   },
-  "records.magabondMix":
-  {
+  "records.metalleux": {
     "sounds": [
       {
-        "name":"fbm:records/magabondMix",
-        "stream":true
+        "name": "fbm:records/metalleux",
+        "stream": true
       }
+    ],
+    "category": "record"
+  },
+  "records.magabondMix": {
+    "sounds": [
+      {
+        "name": "fbm:records/magabondMix",
+        "stream": true
+      }
+    ],
+    "category": "record"
+  },
+  "records.chansonMamelou": {
+    "category": "neutral",
+    "replace": true,
+    "sounds": [
+      {
+        "name": "chanson.mamelou",
+        "type": "event",
+        "weight": 6
+      },
+      "fbm:records/chansonMamelou"
     ]
-  ,"category":"record"
   },
   "mob.bob.hurt": {
     "category": "neutral",
@@ -70,27 +79,27 @@
     ]
   },
   "mob.bob.idle": {
-  "category": "neutral",
-  "replace": true,
-  "sounds": [
-    {
-      "name": "bob.idle",
-      "type": "event",
-      "weight": 4
-    },
-    "fbm:mob/bob/idle1",
-    "fbm:mob/bob/idle2",
-    "fbm:mob/bob/idle3",
-    "fbm:mob/bob/idle4",
-    "fbm:mob/bob/idle5",
-    "fbm:mob/bob/idle6",
-    "fbm:mob/bob/idle7",
-    "fbm:mob/bob/idle8",
-    "fbm:mob/bob/idle9",
-    "fbm:mob/bob/idle10",
-    "fbm:mob/bob/idle11"
-  ]
-},
+    "category": "neutral",
+    "replace": true,
+    "sounds": [
+      {
+        "name": "bob.idle",
+        "type": "event",
+        "weight": 4
+      },
+      "fbm:mob/bob/idle1",
+      "fbm:mob/bob/idle2",
+      "fbm:mob/bob/idle3",
+      "fbm:mob/bob/idle4",
+      "fbm:mob/bob/idle5",
+      "fbm:mob/bob/idle6",
+      "fbm:mob/bob/idle7",
+      "fbm:mob/bob/idle8",
+      "fbm:mob/bob/idle9",
+      "fbm:mob/bob/idle10",
+      "fbm:mob/bob/idle11"
+    ]
+  },
   "mob.bob.burn": {
     "category": "neutral",
     "replace": true,
@@ -100,7 +109,6 @@
         "type": "event",
         "weight": 4
       },
-
       "fbm:mob/bob/burn1",
       "fbm:mob/bob/burn2"
     ]
@@ -266,15 +274,15 @@
     ]
   },
   "sounds.bouze.walk": {
-  "category": "block",
-  "replace": true,
-  "sounds": [
-    {
-      "name": "bouze.walk",
-      "type": "event"
-    },
+    "category": "block",
+    "replace": true,
+    "sounds": [
+      {
+        "name": "bouze.walk",
+        "type": "event"
+      },
       "fbm:sounds/bouze/walk1",
       "fbm:sounds/bouze/walk2"
-  ]
-}
+    ]
+  }
 }

@@ -39,6 +39,7 @@ public class FantaBobMod {
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event){
+        proxy.preInit(event);
         LogHelper.info("Loading Config Files");
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
         LogHelper.info("Loading Blocks");

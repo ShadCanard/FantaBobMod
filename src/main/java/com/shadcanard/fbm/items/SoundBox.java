@@ -8,6 +8,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumHand;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 /**
  * Created by ShadCanard on 26/05/2015.
@@ -19,6 +21,7 @@ public class SoundBox extends ItemFBM implements IItemModelProvider {
     }
 
 
+    @SideOnly(Side.CLIENT)
     @Override
     public ActionResult<ItemStack> onItemRightClick(ItemStack itemStackIn, World worldIn, EntityPlayer playerIn, EnumHand hand) {
         if(!worldIn.isRemote) Minecraft.getMinecraft().displayGuiScreen(new GuiSoundBox(playerIn, worldIn));

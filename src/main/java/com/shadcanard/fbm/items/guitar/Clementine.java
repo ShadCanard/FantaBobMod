@@ -4,23 +4,28 @@ import com.mojang.realmsclient.gui.ChatFormatting;
 import com.shadcanard.fbm.items.ItemFBM;
 import com.shadcanard.fbm.references.Names;
 import com.shadcanard.fbm.references.Reference;
+import com.shadcanard.fbm.utils.LogHelper;
 import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumHand;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
+import net.minecraft.world.chunk.BlockStateContainer;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 import java.util.List;
 
 public class Clementine extends ItemFBM {
-    int cooldown;
     public Clementine(){
     super(Names.Items.CLEMENTINE);
-        this.setMaxDamage(10);
+        this.setMaxDamage(100);
 }
 
     @Override
@@ -36,6 +41,7 @@ public class Clementine extends ItemFBM {
 
 
 
+    @SideOnly(Side.CLIENT)
     @Override
     public ActionResult<ItemStack> onItemRightClick(ItemStack itemstack, World world, EntityPlayer entityplayer, EnumHand hand) {
 
@@ -74,12 +80,9 @@ public class Clementine extends ItemFBM {
 
         RayTraceResult movingobjectposition = world.rayTraceBlocks(vec3d, vec3d1, false);
 
-        ItemStack returned = new ItemStack(this);
-
         if (movingobjectposition == null)
 
         {
-            itemstack.damageItem(-1, entityplayer);
             return super.onItemRightClick(itemstack, world, entityplayer, hand);
 
         }
@@ -95,7 +98,12 @@ public class Clementine extends ItemFBM {
             double k = movingobjectposition.getBlockPos().getZ();
 
             world.spawnEntityInWorld(new EntityLightningBolt(world,i,j,k,false));
-            itemstack.setItemDamage(returned.getItemDamage() + 1);
+            world.setBlockState(new BlockPos(i,j,k), Blocks.FIRE.getDefaultState());
+            itemstack.setItemDamage(itemstack.getItemDamage() + 1);
+            return super.onItemRightClick(itemstack, world, entityplayer, hand);
+        }
+        if(itemstack.getItemDamage() == itemstack.getMaxDamage()){
+            itemstack = null;
             return super.onItemRightClick(itemstack, world, entityplayer, hand);
         }
 

@@ -1,8 +1,6 @@
 package com.shadcanard.fbm.init;
 
-import com.shadcanard.fbm.blocks.BlockBouze;
-import com.shadcanard.fbm.blocks.BlockFBM;
-import com.shadcanard.fbm.blocks.BlockPlasticCreeper;
+import com.shadcanard.fbm.blocks.*;
 import com.shadcanard.fbm.items.IItemModelProvider;
 import com.shadcanard.fbm.references.Names;
 import com.shadcanard.fbm.references.Reference;
@@ -14,12 +12,13 @@ import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModBlocks {
-    public static BlockFBM blockBouze, blockCreeperSkeleton;
+    public static BlockFBM blockBouze, blockCreeperSkeleton, blockStatueFanta, blockStatueBob;
 
     public static void init() {
         blockBouze = register(new BlockBouze());
         blockCreeperSkeleton = register(new BlockPlasticCreeper());
-
+        blockStatueFanta = register(new BlockStatueFanta());
+        blockStatueBob = register(new BlockStatueBob());
     }
 
     private static <T extends Block> T register (T block, ItemBlock itemBlock) {

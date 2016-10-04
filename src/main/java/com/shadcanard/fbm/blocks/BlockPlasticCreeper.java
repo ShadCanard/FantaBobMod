@@ -22,24 +22,9 @@ import java.util.List;
 /**
  * Created by kurt_ on 03/10/2016.
  */
-public class BlockPlasticCreeper extends BlockFBM {
-
-    public static final PropertyDirection FACING = BlockHorizontal.FACING;
-
+public class BlockPlasticCreeper extends BlockStatue {
     public BlockPlasticCreeper() {
         super(Names.Blocks.BLOCK_CREEPER);
-//        this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
-    }
-    public IBlockState getStateFromMeta(int meta)
-    {
-        EnumFacing enumfacing = EnumFacing.getFront(meta);
-
-        if (enumfacing.getAxis() == EnumFacing.Axis.Y)
-        {
-            enumfacing = EnumFacing.NORTH;
-        }
-
-        return this.getDefaultState().withProperty(FACING, enumfacing);
     }
 
 
@@ -49,31 +34,6 @@ public class BlockPlasticCreeper extends BlockFBM {
         tooltip.add(ChatFormatting.DARK_RED + "Véritable squelette de creeper en plastique !");
     }
 
-    public int getMetaFromState(IBlockState state)
-    {
-        return ((EnumFacing)state.getValue(FACING)).getIndex();
-    }
-
-    @Override
-    public IBlockState onBlockPlaced(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer) {
-        return this.getDefaultState().withProperty(FACING,placer.getHorizontalFacing());
-    }
-
-    protected BlockStateContainer createBlockState()
-    {
-        return new BlockStateContainer(this, new IProperty[] {FACING});
-    }
-
-
-    @Override
-    public EnumBlockRenderType getRenderType(IBlockState state) {
-        return EnumBlockRenderType.MODEL;
-    }
-
-    @Override
-    public boolean isOpaqueCube(IBlockState state) {
-        return false;
-    }
 
 
     @Override
@@ -81,6 +41,4 @@ public class BlockPlasticCreeper extends BlockFBM {
         AxisAlignedBB AABB = new AxisAlignedBB(0.25F, 0.0F, 0.15F, 0.75F, 1.65F, 0.86F);
         return AABB;
     }
-
-
 }

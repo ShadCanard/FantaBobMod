@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "fbm:statueFanta"
+    },
+    "facing=south": {
+      "model": "fbm:statueFanta",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "fbm:statueFanta",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "fbm:statueFanta",
+      "y": 90
+    }
+  }
+}
