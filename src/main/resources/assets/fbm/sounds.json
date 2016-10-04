@@ -97,7 +97,8 @@
       "fbm:mob/bob/idle8",
       "fbm:mob/bob/idle9",
       "fbm:mob/bob/idle10",
-      "fbm:mob/bob/idle11"
+      "fbm:mob/bob/idle11",
+      "fbm:mob/bob/idle12"
     ]
   },
   "mob.bob.burn": {
@@ -125,7 +126,8 @@
       "fbm:mob/fanta/death1",
       "fbm:mob/fanta/death2",
       "fbm:mob/fanta/death3",
-      "fbm:mob/fanta/death4"
+      "fbm:mob/fanta/death4",
+      "fbm:mob/fanta/death5"
     ]
   },
   "mob.fanta.idle": {
@@ -140,7 +142,10 @@
       "fbm:mob/fanta/idle1",
       "fbm:mob/fanta/idle2",
       "fbm:mob/fanta/idle3",
-      "fbm:mob/fanta/idle4"
+      "fbm:mob/fanta/idle4",
+      "fbm:mob/fanta/idle5",
+      "fbm:mob/fanta/idle6",
+      "fbm:mob/fanta/idle7"
     ]
   },
   "mob.fanta.hurt": {
