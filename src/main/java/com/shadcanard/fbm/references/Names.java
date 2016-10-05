@@ -60,6 +60,9 @@ public class Names {
         public static final String BOT = "botlennon";
         public static final String BOSS_LENNON = "bosslennon";
         public static final String FEMME = "bonneFemme";
+        public static final String BUDDY_BOB = "buddyBob";
+        public static final String BUDDY_FANTA = "buddyFanta";
+        public static final String BUDDY_TIPEEE = "buddyTipeee";
     }
 
     public static final class NBT
