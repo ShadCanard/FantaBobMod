@@ -1,13 +1,22 @@
-# Created by .ignore support plugin (hsz.mobi)
+# eclipse
+bin
+*.launch
+.settings
+.metadata
+.classpath
+.project
+
+# idea
+out
+*.ipr
+*.iws
+*.iml
+.idea
+
+# gradle
 build
+.gradle
+
+# other
 eclipse
-FantaBobMod.ipr
-FantaBobMod.iml
-FantaBobMod.iws
-/.idea/
-/.gradle/
-/gradle/
-/run/
-/outWork/
-/Models/
-/Techne/
+run

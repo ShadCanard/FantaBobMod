@@ -49,7 +49,7 @@ public class FantaBobMod {
         LogHelper.info("Loading Armor");
         ModArmor.init();
         LogHelper.info("Loading Entities");
-        ModEntities.init();
+        // ModEntities.init();
 
         //LogHelper.info("Loading Achievements");
         //AchievementHandler.init();

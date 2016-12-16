@@ -39,12 +39,9 @@ public class Clementine extends ItemFBM {
         list.add(ChatFormatting.DARK_RED + "I am the Devil, I love Metal !");
     }
 
-
-
-    @SideOnly(Side.CLIENT)
     @Override
-    public ActionResult<ItemStack> onItemRightClick(ItemStack itemstack, World world, EntityPlayer entityplayer, EnumHand hand) {
-
+    public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer entityplayer, EnumHand hand) {
+        ItemStack itemstack = entityplayer.getHeldItem(hand);
 
         float f = 1.0F;
 
@@ -83,7 +80,7 @@ public class Clementine extends ItemFBM {
         if (movingobjectposition == null)
 
         {
-            return super.onItemRightClick(itemstack, world, entityplayer, hand);
+            return super.onItemRightClick(world, entityplayer, hand);
 
         }
 
@@ -97,16 +94,27 @@ public class Clementine extends ItemFBM {
 
             double k = movingobjectposition.getBlockPos().getZ();
 
-            world.spawnEntityInWorld(new EntityLightningBolt(world,i,j,k,false));
-            world.setBlockState(new BlockPos(i,j,k), Blocks.FIRE.getDefaultState());
+            double jMost = j-1;
+            /**
+             * Searching topmost block */
+            boolean isTopMost = false;
+            while(!isTopMost){
+                jMost++;
+                BlockPos pos = new BlockPos(i,jMost,k);
+                isTopMost = world.canBlockSeeSky(pos);
+            }
+
+            world.spawnEntityInWorld(new EntityLightningBolt(world,i,jMost,k,false));
+            world.setBlockState(new BlockPos(i,++jMost,k), Blocks.FIRE.getDefaultState());
             itemstack.setItemDamage(itemstack.getItemDamage() + 1);
-            return super.onItemRightClick(itemstack, world, entityplayer, hand);
+            return super.onItemRightClick(world, entityplayer, hand);
         }
         if(itemstack.getItemDamage() == itemstack.getMaxDamage()){
             itemstack = null;
-            return super.onItemRightClick(itemstack, world, entityplayer, hand);
+            return super.onItemRightClick(world, entityplayer, hand);
         }
 
-        return super.onItemRightClick(itemstack, world, entityplayer, hand);
+        return super.onItemRightClick(world, entityplayer, hand);
+
     }
 }

@@ -29,7 +29,7 @@ public class DebugTool extends ItemFBM {
     }
 
     @Override
-    public ActionResult<ItemStack> onItemRightClick(ItemStack itemStackIn, World worldIn, EntityPlayer playerIn, EnumHand hand) {
+    public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand hand) {
         if(!worldIn.isRemote){
             if(FantaBobMod.IS_DEBUG_MODE){
                 BuddyBob bob = new BuddyBob(worldIn);
@@ -38,11 +38,11 @@ public class DebugTool extends ItemFBM {
                 bob.setOwnerId(playerIn.getPersistentID());
                 worldIn.spawnEntityInWorld(bob);
             }else{
-                playerIn.addChatComponentMessage(new TextComponentString(ChatFormatting.BLUE + "Un objet qui ne vous sera d'aucune utilité."));
+                playerIn.addChatComponentMessage(new TextComponentString(ChatFormatting.BLUE + "Un objet qui ne vous sera d'aucune utilité."), true);
             }
         }
 
-        return super.onItemRightClick(itemStackIn, worldIn, playerIn, hand);
+        return super.onItemRightClick(worldIn, playerIn, hand);
     }
 
     private IBlockState getBlockLookingAt(World world, EntityPlayer player){

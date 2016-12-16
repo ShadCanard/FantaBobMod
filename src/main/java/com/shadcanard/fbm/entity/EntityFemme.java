@@ -8,6 +8,7 @@ import net.minecraft.entity.ai.*;
 import net.minecraft.entity.passive.EntityAnimal;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
+import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.ResourceLocation;
@@ -78,15 +79,18 @@ public class EntityFemme extends EntityAnimal {
         return stack == null ? false : stack.getItem() == ModItems.itemArgent;
     }
 
-    public boolean processInteract(EntityPlayer player, EnumHand hand, @Nullable ItemStack stack)
+    public boolean processInteract(EntityPlayer player, EnumHand hand)
     {
+        ItemStack stack = player.getHeldItem(hand);
+
         LogHelper.info("Starting Milk");
         if (stack != null && stack.getItem() == Items.BUCKET && !player.capabilities.isCreativeMode && !this.isChild())
         {
             LogHelper.info("Milking");
             player.playSound(getSoundEvent("milk"), 1.0F, 1.0F);
+            stack.func_190918_g(1);
 
-            if (--stack.stackSize == 0)
+            if (stack.func_190926_b())
             {
                 player.setHeldItem(hand, new ItemStack(ModItems.mamelouBucket));
             }
@@ -99,7 +103,7 @@ public class EntityFemme extends EntityAnimal {
         }
         else
         {
-            return super.processInteract(player, hand, stack);
+            return super.processInteract(player, hand);
         }
     }
 

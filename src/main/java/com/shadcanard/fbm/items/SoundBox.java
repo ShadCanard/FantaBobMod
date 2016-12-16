@@ -23,8 +23,8 @@ public class SoundBox extends ItemFBM implements IItemModelProvider {
 
     @SideOnly(Side.CLIENT)
     @Override
-    public ActionResult<ItemStack> onItemRightClick(ItemStack itemStackIn, World worldIn, EntityPlayer playerIn, EnumHand hand) {
+    public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand hand) {
         if(!worldIn.isRemote) Minecraft.getMinecraft().displayGuiScreen(new GuiSoundBox(playerIn, worldIn));
-        return super.onItemRightClick(itemStackIn, worldIn, playerIn, hand);
+        return super.onItemRightClick(worldIn, playerIn, hand);
     }
 }

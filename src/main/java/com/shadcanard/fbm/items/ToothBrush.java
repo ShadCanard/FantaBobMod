@@ -22,9 +22,9 @@ public class ToothBrush extends ItemFBM {
 
 
     @Override
-    public ActionResult<ItemStack> onItemRightClick(ItemStack itemStackIn, World worldIn, EntityPlayer playerIn, EnumHand hand) {
+    public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand hand) {
         playerIn.playSound(getBrushSound(), 1.0F ,1.0F);
-        return super.onItemRightClick(itemStackIn, worldIn, playerIn, hand);
+        return super.onItemRightClick(worldIn, playerIn, hand);
     }
 
     public SoundEvent getBrushSound(){

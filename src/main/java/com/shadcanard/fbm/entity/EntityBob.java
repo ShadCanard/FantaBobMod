@@ -42,6 +42,7 @@ public class EntityBob extends EntityCreature {
 
     }
 
+
     public boolean hasBurnSoundPlayed(){
         return BurnSoundPlayed;
     }

@@ -26,8 +26,8 @@ public class ArmorFBM extends ItemArmor implements IItemModelProvider {
     }
 
     @Override
-    public ActionResult<ItemStack> onItemRightClick(ItemStack itemStackIn, World worldIn, EntityPlayer playerIn, EnumHand hand) {
-        return super.onItemRightClick(itemStackIn, worldIn, playerIn, hand);
+    public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand hand) {
+        return super.onItemRightClick(worldIn, playerIn, hand);
     }
 
     @Override

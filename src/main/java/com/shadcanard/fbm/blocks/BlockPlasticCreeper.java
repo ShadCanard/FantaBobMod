@@ -27,15 +27,6 @@ public class BlockPlasticCreeper extends BlockStatue {
         super(Names.Blocks.BLOCK_CREEPER);
     }
 
-
-    @Override
-    public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> tooltip, boolean advanced) {
-        super.addInformation(stack, playerIn, tooltip, advanced);
-        tooltip.add(ChatFormatting.DARK_RED + "Véritable squelette de creeper en plastique !");
-    }
-
-
-
     @Override
     public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
         AxisAlignedBB AABB = new AxisAlignedBB(0.25F, 0.0F, 0.15F, 0.75F, 1.65F, 0.86F);
