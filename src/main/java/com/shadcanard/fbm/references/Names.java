@@ -29,7 +29,6 @@ public class Names {
         public static final String GUITAR_BODY = "bodyGuitar";
         public static final String GUITAR_HEAD = "headGuitar";
         public static final String GUITAR_TOP = "guitarTop";
-        public static final String SOUNDBOX = "SoundBox";
 
         //Cosplay Names
         public static final String FANTA_HEAD = "fantaHead";

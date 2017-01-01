@@ -2,6 +2,8 @@ package com.shadcanard.fbm.proxy;
 
 import com.shadcanard.fbm.entity.*;
 import com.shadcanard.fbm.entity.buddy.BuddyBob;
+import com.shadcanard.fbm.entity.buddy.BuddyFanta;
+import com.shadcanard.fbm.entity.buddy.BuddyTipeee;
 import com.shadcanard.fbm.models.ModelFemme;
 import com.shadcanard.fbm.references.Reference;
 import com.shadcanard.fbm.renders.*;
@@ -39,7 +41,7 @@ public class ClientProxy extends CommonProxy
         RenderingRegistry.registerEntityRenderingHandler(EntityBossLennon.class, new RenderBossLennon(new ModelBiped(), 0.5F, 6));
         RenderingRegistry.registerEntityRenderingHandler(EntityFemme.class, new RenderFemme(new ModelFemme(),0.5F));
         RenderingRegistry.registerEntityRenderingHandler(BuddyBob.class, new RenderBuddyBob(new ModelBiped(),0.5F));
-        RenderingRegistry.registerEntityRenderingHandler(BuddyBob.class, new RenderBuddyFanta(new ModelBiped(),0.5F));
-        RenderingRegistry.registerEntityRenderingHandler(BuddyBob.class, new RenderBuddyTipeee(new ModelBiped(),0.5F));
+        RenderingRegistry.registerEntityRenderingHandler(BuddyFanta.class, new RenderBuddyFanta(new ModelBiped(),0.5F));
+        RenderingRegistry.registerEntityRenderingHandler(BuddyTipeee.class, new RenderBuddyTipeee(new ModelBiped(0,0,64,64),0.5F));
     }
 }

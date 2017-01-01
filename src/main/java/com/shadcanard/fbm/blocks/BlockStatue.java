@@ -30,6 +30,7 @@ public class BlockStatue extends BlockFBM {
     public BlockStatue(String name) {
         super(name);
     }
+
     public IBlockState getStateFromMeta(int meta)
     {
         EnumFacing enumfacing = EnumFacing.getFront(meta);

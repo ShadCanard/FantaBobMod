@@ -24,6 +24,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 @SuppressWarnings("ALL")
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.MOD_VERSION, guiFactory = Reference.GUI_FACTORY_CLASS)
+
 public class FantaBobMod {
 
     public static final boolean IS_DEBUG_MODE = true;

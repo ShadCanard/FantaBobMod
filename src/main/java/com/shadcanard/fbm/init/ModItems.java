@@ -14,7 +14,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class ModItems {
     public static ItemFBM magabondChop, toothBrush, stampCollection,
             clementine, clementine_top, clementine_body, clementine_head, clementine_string,
-            soundBox, debugTool, itemArgent;
+            debugTool, itemArgent;
     public static Item record_Avion, record_pyrobarbare, record_magabondMix, record_Metalleux, bobAxe, bambooSword, pyroAxe;
     public static ItemFood mamelouBucket, mamelouCheese;
 
@@ -37,7 +37,6 @@ public class ModItems {
         clementine_body = register(new bodyGuitar());
         clementine_head = register(new headGuitar());
         clementine_string = register(new stringsGuitar());
-        soundBox = register(new SoundBox());
         debugTool = register(new DebugTool());
         mamelouBucket = register(new MamelouBucket(3));
         mamelouCheese = register(new ItemMamelouCheese(8));

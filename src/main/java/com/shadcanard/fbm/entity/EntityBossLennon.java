@@ -1,10 +1,15 @@
 package com.shadcanard.fbm.entity;
 
 
+import com.shadcanard.fbm.references.Reference;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.monster.EntityMob;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+
+import javax.annotation.Nullable;
 
 public class EntityBossLennon extends EntityMob {
 
@@ -13,7 +18,44 @@ public EntityBossLennon(World worldIn)
         {
             super(worldIn);
             this.setSize(this.width * 6.0F, this.height * 6.0F);
+            isImmuneToFire = true;
         }
+
+
+    @Override
+    public boolean isImmuneToExplosions() {
+        return true;
+    }
+
+    @Override
+    protected float getSoundPitch() {
+        return 0.8F;
+    }
+
+    @Override
+    protected float getSoundVolume() {
+        return 1.5F;
+    }
+
+    @Override
+    protected SoundEvent getDeathSound() {
+        return getSounds("death");
+    }
+
+    @Override
+    protected SoundEvent getHurtSound() {
+        return getSounds("hurt");
+    }
+
+    @Nullable
+    @Override
+    protected SoundEvent getAmbientSound() {
+        return getSounds("idle");
+    }
+
+    public SoundEvent getSounds(String event){
+        return new SoundEvent(new ResourceLocation(Reference.MOD_ID,"mob.bob." + event));
+    }
 
     public float getEyeHeight() {
         return 10.440001F;

@@ -7,5 +7,6 @@ public class BuddyBob extends Buddy {
     public BuddyBob(World worldIn) {
         super(worldIn);
         setSounds("bob");
+        setCustomNameTag("MiniBob");
     }
 }

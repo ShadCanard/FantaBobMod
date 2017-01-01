@@ -1,6 +1,5 @@
 package com.shadcanard.fbm.entity.buddy;
 
-import com.mojang.realmsclient.util.Pair;
 import com.shadcanard.fbm.references.Reference;
 import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.EntityLivingBase;
@@ -24,11 +23,15 @@ import javax.annotation.Nullable;
 public class Buddy extends EntityTameable {
 
     SoundEvent ambientSound, hurtSound, deathSound;
+    public String name;
 
     public Buddy(World worldIn) {
         super(worldIn);
         setTamed(true);
-        this.setSize(this.height * 0.5F, this.width * 0.5F);
+        this.setSize(0.5F,1F);
+        if(worldIn.isRemote){
+            setEntityBoundingBox(getRenderBoundingBox());
+        }
     }
 
     protected void setSounds(String creatureName){
@@ -102,7 +105,7 @@ public class Buddy extends EntityTameable {
 
     public float getEyeHeight()
     {
-        return this.height * 1.7F;
+        return this.height * 0.89F;
     }
 
     public boolean shouldAttackEntity(EntityLivingBase p_142018_1_, EntityLivingBase p_142018_2_)

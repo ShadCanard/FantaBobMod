@@ -32,11 +32,11 @@ public class DebugTool extends ItemFBM {
     public ActionResult<ItemStack> onItemRightClick(ItemStack itemStackIn, World worldIn, EntityPlayer playerIn, EnumHand hand) {
         if(!worldIn.isRemote){
             if(FantaBobMod.IS_DEBUG_MODE){
-                BuddyBob bob = new BuddyBob(worldIn);
+                BuddyTipeee bud = new BuddyTipeee(worldIn);
                 BlockPos pos = getBlockPosLookingAt(worldIn,playerIn);
-                bob.setPosition(pos.up());
-                bob.setOwnerId(playerIn.getPersistentID());
-                worldIn.spawnEntityInWorld(bob);
+                bud.setPosition(pos.up());
+                bud.setOwnerId(playerIn.getPersistentID());
+                worldIn.spawnEntityInWorld(bud);
             }else{
                 playerIn.addChatComponentMessage(new TextComponentString(ChatFormatting.BLUE + "Un objet qui ne vous sera d'aucune utilité."));
             }
@@ -49,6 +49,7 @@ public class DebugTool extends ItemFBM {
         RayTraceResult mop = Minecraft.getMinecraft().getRenderViewEntity().rayTrace(200, 1.0F);
         if(mop != null)
         {
+
             IBlockState blockLookingAt = world.getBlockState(new BlockPos(mop.getBlockPos().getX(), mop.getBlockPos().getY(), mop.getBlockPos().getZ()));
             return blockLookingAt;
         }
