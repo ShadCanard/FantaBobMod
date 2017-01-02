@@ -7,7 +7,7 @@ import net.minecraft.util.ResourceLocation;
 public class SkinHelper {
 
     public static void init(){
-        for (int i = 0; i < Reference.TIPEEE_LIST.length - 1; i++) {
+        for (int i = 0; i < Reference.TIPEEE_LIST.length; i++) {
             String name = Reference.TIPEEE_LIST[i];
             LogHelper.info("Downloading " + name + " skin");
             AbstractClientPlayer.getDownloadImageSkin(new ResourceLocation("fbm","textures/entity/" + name + ".png"),name);

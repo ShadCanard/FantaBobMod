@@ -14,6 +14,7 @@ import com.shadcanard.fbm.init.ModEntities;
 import com.shadcanard.fbm.init.ModItems;
 import com.shadcanard.fbm.proxy.CommonProxy;
 import com.shadcanard.fbm.references.Reference;
+import com.shadcanard.fbm.utils.CommandHelper;
 import com.shadcanard.fbm.utils.LogHelper;
 import com.shadcanard.fbm.utils.SkinHelper;
 import net.minecraft.creativetab.CreativeTabs;
@@ -22,6 +23,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 
 @SuppressWarnings("ALL")
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.MOD_VERSION, guiFactory = Reference.GUI_FACTORY_CLASS)
@@ -75,4 +77,8 @@ public class FantaBobMod {
         LogHelper.info("Post Initialization Complete !");
     }
 
+    @Mod.EventHandler
+    public void serverIint(FMLServerStartingEvent event){
+        CommandHelper.init(event);
+    }
 }
