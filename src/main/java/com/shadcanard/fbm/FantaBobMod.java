@@ -15,6 +15,7 @@ import com.shadcanard.fbm.init.ModItems;
 import com.shadcanard.fbm.proxy.CommonProxy;
 import com.shadcanard.fbm.references.Reference;
 import com.shadcanard.fbm.utils.LogHelper;
+import com.shadcanard.fbm.utils.SkinHelper;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -51,6 +52,7 @@ public class FantaBobMod {
         LogHelper.info("Loading Entities");
         ModEntities.init();
 
+
         //LogHelper.info("Loading Achievements");
         //AchievementHandler.init();
 
@@ -68,7 +70,8 @@ public class FantaBobMod {
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event){
-
+        SkinHelper.init();
+        LogHelper.info("Finished Downloading skins");
         LogHelper.info("Post Initialization Complete !");
     }
 

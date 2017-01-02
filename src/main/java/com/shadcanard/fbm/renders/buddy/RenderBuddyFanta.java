@@ -10,8 +10,4 @@ public class RenderBuddyFanta extends RenderBuddy {
         super(modelBiped, shadow, 0.5F);
     }
 
-    @Override
-    protected ResourceLocation getBuddyTexture(Buddy buddy) {
-        return super.getBuddyTexture(buddy);
-    }
 }

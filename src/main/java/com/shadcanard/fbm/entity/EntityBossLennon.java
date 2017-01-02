@@ -19,6 +19,8 @@ public EntityBossLennon(World worldIn)
         return 10.440001F;
     }
 
+
+
     protected void applyEntityAttributes() {
         super.applyEntityAttributes();
         this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(100.0D);

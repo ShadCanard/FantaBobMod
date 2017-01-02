@@ -2,6 +2,8 @@ package com.shadcanard.fbm.entity.buddy;
 
 import com.mojang.realmsclient.util.Pair;
 import com.shadcanard.fbm.references.Reference;
+import com.shadcanard.fbm.utils.LogHelper;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -12,8 +14,10 @@ import net.minecraft.entity.passive.EntityHorse;
 import net.minecraft.entity.passive.EntityTameable;
 import net.minecraft.entity.passive.EntityWolf;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.DamageSource;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
+import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import javax.annotation.Nullable;
@@ -28,7 +32,7 @@ public class Buddy extends EntityTameable {
     public Buddy(World worldIn) {
         super(worldIn);
         setTamed(true);
-        this.setSize(this.height * 0.5F, this.width * 0.5F);
+        setSize(width * 0.5F, height * 0.5F);
     }
 
     protected void setSounds(String creatureName){
@@ -70,6 +74,11 @@ public class Buddy extends EntityTameable {
         return deathSound;
     }
 
+    @Nullable
+    @Override
+    public AxisAlignedBB getCollisionBox(Entity entityIn) {
+        return new AxisAlignedBB(0,0,0,2.0,1,1);
+    }
 
     @Override
     public EntityAgeable createChild(EntityAgeable ageable) {
@@ -102,8 +111,9 @@ public class Buddy extends EntityTameable {
 
     public float getEyeHeight()
     {
-        return this.height * 1.7F;
+        return this.height * 0.7F;
     }
+
 
     public boolean shouldAttackEntity(EntityLivingBase p_142018_1_, EntityLivingBase p_142018_2_)
     {

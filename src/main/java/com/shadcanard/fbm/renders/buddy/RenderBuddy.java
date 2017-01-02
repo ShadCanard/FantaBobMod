@@ -25,6 +25,7 @@ public class RenderBuddy extends RenderBiped {
         this.scale = scale;
     }
 
+
     @Override
     protected void preRenderCallback(EntityLivingBase p_77041_1_, float p_77041_2_) {
         GL11.glScalef(this.scale, this.scale, this.scale);
@@ -42,7 +43,7 @@ public class RenderBuddy extends RenderBiped {
         }else if(buddy instanceof BuddyFanta){
             return new ResourceLocation(Reference.MOD_ID, "textures/entity/fanta.png");
         }else if(buddy instanceof BuddyTipeee){
-            return AbstractClientPlayer.getLocationSkin(((BuddyTipeee)buddy).getName());
+            return ((BuddyTipeee)buddy).getTippeurSkin();
         }else{
             return texture;
         }

@@ -1,5 +1,10 @@
 package com.shadcanard.fbm.blocks;
 
+import com.shadcanard.fbm.entity.EntityBob;
+import com.shadcanard.fbm.entity.buddy.BuddyBob;
+import com.shadcanard.fbm.init.ModBlocks;
+import com.shadcanard.fbm.init.ModItems;
+import com.shadcanard.fbm.items.ItemArgent;
 import com.shadcanard.fbm.references.Names;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
@@ -29,7 +34,12 @@ public class BlockStatueBob extends BlockStatue {
 
     @Override
     public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing heldItem, float side, float hitX, float hitY) {
-        return super.onBlockActivated(worldIn, pos, state, playerIn, hand, heldItem, side, hitX, hitY);
+        if(!worldIn.isRemote){
+            if(playerIn.getHeldItem(hand).getItem() instanceof ItemArgent){
+                spawnPet(new BuddyBob(worldIn), pos);
+            }
+        }
+        return true;
     }
 
 }

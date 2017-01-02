@@ -2,12 +2,14 @@ package com.shadcanard.fbm.blocks;
 
 import com.mojang.realmsclient.gui.ChatFormatting;
 import com.shadcanard.fbm.references.Names;
+import com.shadcanard.fbm.utils.LogHelper;
 import net.minecraft.block.BlockHorizontal;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -42,7 +44,13 @@ public class BlockStatue extends BlockFBM {
         return this.getDefaultState().withProperty(FACING, enumfacing);
     }
 
-
+    public void spawnPet(EntityLiving living, BlockPos pos){
+        LogHelper.info("Spawned " + living.getName());
+        living.getEntityWorld().setBlockToAir(pos);
+        living.getEntityWorld().createExplosion(null,pos.getX(),pos.getY(),pos.getZ(),0F,true);
+        living.setPosition(pos.getX(),pos.getY(),pos.getZ());
+        living.getEntityWorld().spawnEntityInWorld(living);
+    }
 
     public int getMetaFromState(IBlockState state)
     {

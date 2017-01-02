@@ -95,3 +95,6 @@ achievement.getBambooSword.desc=Crafter une épée en bambou
 achievement.getMagabondChop.desc=Obtenir un morceau de Magabond
 achievement.getFantaGlasses.desc=Obtenir les lunettes de Fanta
 achievement.killBob.desc=Tuer Boblennon
+
+####ChatMessage
+text.slaughter = a été massacré par
