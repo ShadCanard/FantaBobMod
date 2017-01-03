@@ -1,6 +1,7 @@
 package com.shadcanard.fbm.proxy;
 
 import net.minecraft.item.Item;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 public class CommonProxy
@@ -13,6 +14,10 @@ public class CommonProxy
 
     public void registerRender()
     {
+
+    }
+
+    public void init(FMLInitializationEvent event){
 
     }
 }

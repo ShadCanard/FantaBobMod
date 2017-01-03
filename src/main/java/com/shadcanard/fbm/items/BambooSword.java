@@ -7,6 +7,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
+import net.minecraft.util.text.TextComponentTranslation;
 
 import java.util.List;
 
@@ -24,7 +25,7 @@ public class BambooSword extends ItemSword implements IItemModelProvider {
     @Override
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> tooltip, boolean advanced) {
         super.addInformation(stack, playerIn, tooltip, advanced);
-        tooltip.add(ChatFormatting.DARK_GREEN + "Dédicacée par Bob Lennon !");
+        tooltip.add(ChatFormatting.DARK_GREEN + new TextComponentTranslation("tooltip.bambooSword").getFormattedText()); // "Dédicacée par Bob Lennon !"
     }
 
     @Override

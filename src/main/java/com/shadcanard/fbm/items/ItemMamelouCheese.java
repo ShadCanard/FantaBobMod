@@ -14,6 +14,7 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
+import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.world.World;
 
 import java.util.List;
@@ -33,7 +34,7 @@ public class ItemMamelouCheese extends ItemFood implements IItemModelProvider {
     @Override
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> tooltip, boolean advanced) {
         super.addInformation(stack, playerIn, tooltip, advanced);
-        tooltip.add(ChatFormatting.DARK_GREEN + "A base de bon lait de mamelle !");
+        tooltip.add(ChatFormatting.DARK_GREEN + new TextComponentTranslation("tooltip.mamelou").getFormattedText());
     }
 
     @Override

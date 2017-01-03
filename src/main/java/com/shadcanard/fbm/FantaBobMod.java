@@ -5,6 +5,7 @@
 package com.shadcanard.fbm;
 
 import com.shadcanard.fbm.blocks.BlockFBM;
+import com.shadcanard.fbm.commands.CommandTipeee;
 import com.shadcanard.fbm.creativeTab.FBMTabs;
 import com.shadcanard.fbm.handler.ConfigurationHandler;
 import com.shadcanard.fbm.handler.CraftingHandler;
@@ -21,6 +22,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 
 @SuppressWarnings("ALL")
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.MOD_VERSION, guiFactory = Reference.GUI_FACTORY_CLASS)
@@ -61,16 +63,20 @@ public class FantaBobMod {
     @Mod.EventHandler
     public void init(FMLInitializationEvent event){
         proxy.registerRender();
+        proxy.init(event);
         LogHelper.info("Loading Crafts");
         CraftingHandler.init();
-
         LogHelper.info("Initialization Complete !");
     }
 
     @Mod.EventHandler
-    public void postInit(FMLPostInitializationEvent event){
+    public void postInit(FMLPostInitializationEvent event) {
 
         LogHelper.info("Post Initialization Complete !");
     }
 
+    @Mod.EventHandler
+    public void serverInit(FMLServerStartingEvent event){
+        event.registerServerCommand(new CommandTipeee());
+    }
 }

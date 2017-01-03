@@ -10,10 +10,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.pathfinding.PathNavigateGround;
-import net.minecraft.util.DamageSource;
-import net.minecraft.util.EnumHand;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.SoundEvent;
+import net.minecraft.util.*;
 import net.minecraft.world.World;
 
 import javax.annotation.Nullable;
@@ -126,16 +123,23 @@ public class EntityFanta extends EntityCreature{
      //   return AchievementHandler.killFantaAch;
    // }
 
+    public SoundEvent getLivingSound() {
+        return new SoundEvent(new ResourceLocation("fbm:mob.fanta.idle"));
+    }
+
+    @Override
+    public void playLivingSound() {
+        worldObj.playSound(posX,posY,posZ,getLivingSound(), SoundCategory.NEUTRAL, getSoundVolume(),getSoundPitch(),true);
+    }
+
+    @Override
+    protected void playHurtSound(DamageSource source) {
+        worldObj.playSound(posX,posY,posZ,getHurtSound(), SoundCategory.NEUTRAL, getSoundVolume(),getSoundPitch(),true);
+    }
+
     @Override
     public void onDeath(DamageSource damageSource) {
-
-/*
-        Entity assassin = damageSource.getEntity();
-
-        if(assassin != null && assassin instanceof EntityPlayer){
-            ((EntityPlayer)assassin).triggerAchievement(getKillAch());
-        }
-*/
+        worldObj.playSound(posX,posY,posZ,getDeathSound(), SoundCategory.NEUTRAL, getSoundVolume(),getSoundPitch(),true);
         super.onDeath(damageSource);
     }
 

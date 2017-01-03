@@ -11,7 +11,9 @@ import net.minecraft.entity.passive.EntityHorse;
 import net.minecraft.entity.passive.EntityTameable;
 import net.minecraft.entity.passive.EntityWolf;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.DamageSource;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -22,7 +24,7 @@ import javax.annotation.Nullable;
  */
 public class Buddy extends EntityTameable {
 
-    SoundEvent ambientSound, hurtSound, deathSound;
+    SoundEvent ambientSound, hurtSound, deathSound, livingSound;
     public String name;
 
     public Buddy(World worldIn) {
@@ -39,10 +41,12 @@ public class Buddy extends EntityTameable {
             ambientSound = new SoundEvent(new ResourceLocation(Reference.MOD_ID,"mob." + creatureName + ".idle"));
             hurtSound = new SoundEvent(new ResourceLocation(Reference.MOD_ID,"mob." + creatureName + ".hurt"));
             deathSound = new SoundEvent(new ResourceLocation(Reference.MOD_ID,"mob." + creatureName + ".death"));
+            livingSound = new SoundEvent(new ResourceLocation(Reference.MOD_ID,"mob." + creatureName + ".idle"));
         }else{
             ambientSound = super.getAmbientSound();
             hurtSound = super.getHurtSound();
             deathSound = super.getDeathSound();
+            livingSound = super.getAmbientSound();
         }
     }
 
@@ -61,6 +65,10 @@ public class Buddy extends EntityTameable {
         return ambientSound;
     }
 
+    public SoundEvent getLivingSound() {
+        return livingSound;
+    }
+
     @Nullable
     @Override
     public SoundEvent getHurtSound() {
@@ -73,6 +81,21 @@ public class Buddy extends EntityTameable {
         return deathSound;
     }
 
+    @Override
+    public void playLivingSound() {
+        worldObj.playSound(posX,posY,posZ,getLivingSound(), SoundCategory.NEUTRAL, getSoundVolume(),getSoundPitch(),true);
+    }
+
+    @Override
+    protected void playHurtSound(DamageSource source) {
+        worldObj.playSound(posX,posY,posZ,getHurtSound(), SoundCategory.NEUTRAL, getSoundVolume(),getSoundPitch(),true);
+    }
+
+    @Override
+    public void onDeath(DamageSource damageSource) {
+        worldObj.playSound(posX,posY,posZ,getDeathSound(), SoundCategory.NEUTRAL, getSoundVolume(),getSoundPitch(),true);
+        super.onDeath(damageSource);
+    }
 
     @Override
     public EntityAgeable createChild(EntityAgeable ageable) {

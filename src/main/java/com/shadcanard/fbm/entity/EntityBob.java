@@ -39,8 +39,9 @@ public class EntityBob extends EntityCreature {
         this.tasks.addTask(4, new EntityAIWatchClosest(this,EntityPlayer.class,6.0F));
         this.tasks.addTask(5, new EntityAIPanic(this,0.6D));
         this.targetTasks.addTask(0, new EntityAINearestAttackableTarget(this, EntityJeanKevin.class,false));
-
     }
+
+
 
     public boolean hasBurnSoundPlayed(){
         return BurnSoundPlayed;
@@ -108,6 +109,8 @@ public class EntityBob extends EntityCreature {
         return 0.8F;
     }
 
+
+
     @Override
     public void onLivingUpdate() {
         super.onLivingUpdate();
@@ -154,21 +157,19 @@ public class EntityBob extends EntityCreature {
     }
 
     @Override
-    public void onDeath(DamageSource damageSource) {
-        super.onDeath(damageSource);
-
-        //Entity assassin = damageSource.getEntity();
-
-        //if( assassin != null && assassin instanceof EntityPlayer){
-           // ((EntityPlayer)assassin).triggerAchievement(getKillAch());
-        //}
+    public void playLivingSound() {
+        worldObj.playSound(posX,posY,posZ,getLivingSound(), SoundCategory.NEUTRAL, getSoundVolume(),getSoundPitch(),true);
     }
 
     @Override
-    public void playLivingSound() {
-        if (getLivingSound() != null) {
-            worldObj.playSound(posX,posY,posZ,getLivingSound(), SoundCategory.NEUTRAL, getSoundVolume(),getSoundPitch(),true);   //this,getLivingSound(),getSoundVolume(),1.0F);
-        }
+    protected void playHurtSound(DamageSource source) {
+        worldObj.playSound(posX,posY,posZ,getHurtSound(), SoundCategory.NEUTRAL, getSoundVolume(),getSoundPitch(),true);
+    }
+
+    @Override
+    public void onDeath(DamageSource damageSource) {
+        worldObj.playSound(posX,posY,posZ,getDeathSound(), SoundCategory.NEUTRAL, getSoundVolume(),getSoundPitch(),true);
+        super.onDeath(damageSource);
     }
 
     @Nullable

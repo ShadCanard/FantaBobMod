@@ -13,6 +13,7 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
@@ -37,8 +38,8 @@ public class BlockStatueFanta extends BlockStatue {
     @Override
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> tooltip, boolean advanced) {
         super.addInformation(stack, playerIn, tooltip, advanced);
-        tooltip.add(ChatFormatting.DARK_RED + "Aime l'argent des abonnés !");
-        tooltip.add(ChatFormatting.DARK_RED + "Peut-être que si on lui en donne...");
+        tooltip.add(ChatFormatting.DARK_RED + new TextComponentTranslation("tooltip.blockStatueMain").getFormattedText());
+        tooltip.add(ChatFormatting.DARK_RED + new TextComponentTranslation("tooltip.blockStatueSecond").getFormattedText());
     }
 
 

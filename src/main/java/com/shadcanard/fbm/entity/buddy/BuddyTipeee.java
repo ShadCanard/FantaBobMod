@@ -16,8 +16,8 @@ public class BuddyTipeee extends Buddy {
     public BuddyTipeee(World worldIn) {
         super(worldIn);
         setSounds("null");
-        int ref = (int)(Math.random() * ((Reference.TIPEEE_LIST.length - 1)));
+        int ref = (int)(Math.random() * ((Reference.TIPEEE_LIST.length)));
         name = Reference.TIPEEE_LIST[ref];
-        setCustomNameTag("Mini" + name);
+        setCustomNameTag("Mini-" + name);
     }
 }

@@ -1,6 +1,7 @@
 package com.shadcanard.fbm.blocks;
 
 import com.mojang.realmsclient.gui.ChatFormatting;
+import com.shadcanard.fbm.entity.buddy.Buddy;
 import com.shadcanard.fbm.references.Names;
 import net.minecraft.block.BlockHorizontal;
 import net.minecraft.block.material.Material;
@@ -43,7 +44,11 @@ public class BlockStatue extends BlockFBM {
         return this.getDefaultState().withProperty(FACING, enumfacing);
     }
 
-
+    protected void spawnBuddy(Buddy buddy){
+        buddy.getEntityWorld().createExplosion(null,buddy.getPosition().getX(), buddy.getPosition().getY(), buddy.getPosition().getZ(), 0, true);
+        buddy.getEntityWorld().setBlockToAir(buddy.getPosition());
+        buddy.getEntityWorld().spawnEntityInWorld(buddy);
+    }
 
     public int getMetaFromState(IBlockState state)
     {

@@ -10,6 +10,7 @@ import com.shadcanard.fbm.renders.*;
 import com.shadcanard.fbm.renders.buddy.RenderBuddyBob;
 import com.shadcanard.fbm.renders.buddy.RenderBuddyFanta;
 import com.shadcanard.fbm.renders.buddy.RenderBuddyTipeee;
+import com.shadcanard.fbm.utils.SkinHelper;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -17,6 +18,7 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.client.model.obj.OBJLoader;
 import net.minecraftforge.client.model.obj.OBJModel;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 public class ClientProxy extends CommonProxy
@@ -43,5 +45,10 @@ public class ClientProxy extends CommonProxy
         RenderingRegistry.registerEntityRenderingHandler(BuddyBob.class, new RenderBuddyBob(new ModelBiped(),0.5F));
         RenderingRegistry.registerEntityRenderingHandler(BuddyFanta.class, new RenderBuddyFanta(new ModelBiped(),0.5F));
         RenderingRegistry.registerEntityRenderingHandler(BuddyTipeee.class, new RenderBuddyTipeee(new ModelBiped(0,0,64,64),0.5F));
+    }
+
+    @Override
+    public void init(FMLInitializationEvent event) {
+        SkinHelper.init();
     }
 }

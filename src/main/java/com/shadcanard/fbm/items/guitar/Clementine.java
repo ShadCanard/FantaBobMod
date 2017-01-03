@@ -9,6 +9,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumHand;
@@ -72,6 +73,7 @@ public class Clementine extends ItemFBM {
 
             if (itemstack.getItemDamage() >= (itemstack.getMaxDamage() - 1)) --itemstack.stackSize;
             world.spawnEntityInWorld(new EntityLightningBolt(world, i, j, k, false));
+            world.playSound(i,j,k, SoundEvents.ENTITY_LIGHTNING_IMPACT,null,1.0F,1.0F,true);
             itemstack.setItemDamage(itemstack.getItemDamage() + 1);
             return super.onItemRightClick(itemstack, world, entityplayer, hand);
         }

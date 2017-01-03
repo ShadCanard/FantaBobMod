@@ -95,3 +95,15 @@ achievement.getBambooSword.desc=Crafter une épée en bambou
 achievement.getMagabondChop.desc=Obtenir un morceau de Magabond
 achievement.getFantaGlasses.desc=Obtenir les lunettes de Fanta
 achievement.killBob.desc=Tuer Boblennon
+
+####Text Messages
+text.tipeee=Merci à tous mes tippeurs :
+text.slaughter= a été assassiné par
+
+
+####Tooltips
+tooltip.bambooSword=Dédicacée par Bob Lennon !
+tooltip.mamelou=A base de bon lait de mamelle !
+tooltip.plasticCreeper=Véritable squelette de creeper en plastique !
+tooltip.blockStatueMain=Aime l'argent des abonnés !
+tooltip.blockStatueSecond=Peut-être qu'en lui en donnant...

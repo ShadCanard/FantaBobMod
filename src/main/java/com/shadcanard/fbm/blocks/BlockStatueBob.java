@@ -12,10 +12,12 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 import javax.annotation.Nullable;
+import java.awt.*;
 import java.util.List;
 
 /**
@@ -30,8 +32,8 @@ public class BlockStatueBob extends BlockStatue {
     @Override
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> tooltip, boolean advanced) {
         super.addInformation(stack, playerIn, tooltip, advanced);
-        tooltip.add(ChatFormatting.DARK_RED + "Aime l'argent des abonnés !");
-        tooltip.add(ChatFormatting.DARK_RED + "Peut-être que si on lui en donne...");
+        tooltip.add(ChatFormatting.DARK_RED + new TextComponentTranslation("tooltip.blockStatueMain").getFormattedText());
+        tooltip.add(ChatFormatting.DARK_RED + new TextComponentTranslation("tooltip.blockStatueSecond").getFormattedText());
     }
 
 
@@ -48,7 +50,6 @@ public class BlockStatueBob extends BlockStatue {
                 worldIn.setBlockToAir(pos);
                 worldIn.createExplosion(playerIn, pos.getX(), pos.getY(), pos.getZ(), 0, true);
                 BuddyBob bud = new BuddyBob(worldIn);
-                bud.setLocationAndAngles(pos.getX(), pos.getY(), pos.getZ(), MathHelper.wrapDegrees(worldIn.rand.nextFloat() * 360.0F), 0.0F);
                 bud.setPosition(pos.getX() + hitX, pos.getY() + hitY, pos.getZ() + hitZ);
                 bud.setOwnerId(playerIn.getPersistentID());
                 worldIn.spawnEntityInWorld(bud);

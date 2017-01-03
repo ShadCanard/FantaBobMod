@@ -92,3 +92,14 @@ achievement.getBambooSword.desc=Craft a bamboo sword
 achievement.getMagabondChop.desc=Get a Magabond Chop
 achievement.getFantaGlasses.desc=Get Fanta's glasses
 achievement.killBob.desc=Kill Boblennon
+
+####Text Messages
+text.tipeee=Thanks to all my patreons :
+text.slaughter= was slaughtered by
+
+####Tooltips
+tooltip.bambooSword=Signed by Bob Lennon !
+tooltip.mamelou=Directly extracted from nipples !
+tooltip.plasticCreeper=Authentic Creeper's skeletton in plastic !
+tooltip.blockStatueMain=Likes sub's money !
+tooltip.blockStatueSecond=Maybe if you give it some of it...
