@@ -1,16 +1,17 @@
 package com.shadcanard.fbm.blocks;
 
 import com.mojang.realmsclient.gui.ChatFormatting;
+import com.shadcanard.fbm.entity.EntityFanta;
+import com.shadcanard.fbm.entity.EntityFemme;
 import com.shadcanard.fbm.entity.buddy.BuddyBob;
 import com.shadcanard.fbm.entity.buddy.BuddyFanta;
 import com.shadcanard.fbm.items.ItemArgent;
+import com.shadcanard.fbm.items.ItemMamelouCheese;
 import com.shadcanard.fbm.references.Names;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.EnumFacing;
-import net.minecraft.util.EnumHand;
-import net.minecraft.util.EnumParticleTypes;
+import net.minecraft.util.*;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextComponentTranslation;
@@ -53,9 +54,16 @@ public class BlockStatueFanta extends BlockStatue {
                 bud.setPosition(pos.getX() + hitX, pos.getY() + hitY, pos.getZ() + hitZ);
                 bud.setOwnerId(playerIn.getPersistentID());
                 worldIn.spawnEntityInWorld(bud);
+                        }else if(heldItem.getItem() == null && playerIn.isSneaking()){
+                worldIn.playSound(pos.getX(),pos.getY(),pos.getZ(),new SoundEvent(new ResourceLocation("fbm","mob.fanta.idle")),null, 1.0F,1.0F,true);
+            }else if(heldItem.getItem() != null && heldItem.getItem() instanceof ItemMamelouCheese){
+                worldIn.setBlockToAir(pos);
+                worldIn.createExplosion(playerIn, pos.getX(), pos.getY(), pos.getZ(), 0, true);
+                EntityFanta bud = new EntityFanta(worldIn);
+                bud.setPosition(pos.getX() + hitX, pos.getY() + hitY, pos.getZ() + hitZ);
+                worldIn.spawnEntityInWorld(bud);
             }
-
-        }
+    }
         return super.onBlockActivated(worldIn, pos, state, playerIn, hand, heldItem, side, hitX, hitY, hitZ);
     }
 }

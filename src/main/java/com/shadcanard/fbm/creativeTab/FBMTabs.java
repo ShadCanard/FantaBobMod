@@ -14,6 +14,6 @@ public class FBMTabs extends CreativeTabs {
 
     @Override
     public Item getTabIconItem() {
-        return ModItems.pyroAxe;
+        return ModItems.diamondBarbAxe;
     }
 }

@@ -9,6 +9,8 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
@@ -53,6 +55,10 @@ public class BlockStatueBob extends BlockStatue {
                 bud.setPosition(pos.getX() + hitX, pos.getY() + hitY, pos.getZ() + hitZ);
                 bud.setOwnerId(playerIn.getPersistentID());
                 worldIn.spawnEntityInWorld(bud);
+            }else{
+                if(heldItem.getItem() == null && playerIn.isSneaking()){
+                    worldIn.playSound(pos.getX(),pos.getY(),pos.getZ(),new SoundEvent(new ResourceLocation("fbm","mob.bob.idle")),null, 1.0F,1.0F,true);
+                }
             }
         }
         return super.onBlockActivated(worldIn, pos, state, playerIn, hand, heldItem, side, hitX, hitY, hitZ);

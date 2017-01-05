@@ -1,16 +1,24 @@
 package com.shadcanard.fbm.blocks;
 
 import com.mojang.realmsclient.gui.ChatFormatting;
+import com.shadcanard.fbm.entity.EntityFemme;
+import com.shadcanard.fbm.entity.EntityJeanKevin;
 import com.shadcanard.fbm.entity.buddy.BuddyTipeee;
+import com.shadcanard.fbm.init.ModBlocks;
 import com.shadcanard.fbm.init.ModItems;
+import com.shadcanard.fbm.items.MamelouBucket;
 import com.shadcanard.fbm.references.Names;
 import net.minecraft.block.BlockHorizontal;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.EntityHanging;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumBlockRenderType;
 import net.minecraft.util.EnumFacing;
@@ -47,9 +55,20 @@ public class BlockPlasticCreeper extends BlockStatue {
                 tip.setPosition(pos);
                 tip.setOwnerId(playerIn.getUniqueID());
                 spawnBuddy(tip);
+            }else if(playerIn.getHeldItem(hand).getItem() instanceof MamelouBucket){
+                playerIn.setHeldItem(hand,new ItemStack(Items.BUCKET));
+                EntityFemme femme = new EntityFemme(worldIn);
+                BlockPos pos2 = pos.offset(side);
+                femme.setPosition(pos2.getX(),pos2.getY(),pos2.getZ());
+                worldIn.spawnEntityInWorld(femme);
+            }else if(playerIn.getHeldItem(hand).getItem() == ModItems.magabondChop){
+                playerIn.setHeldItem(hand,new ItemStack(Items.BUCKET));
+                EntityJeanKevin femme = new EntityJeanKevin(worldIn);
+                BlockPos pos2 = pos.offset(side);
+                femme.setPosition(pos2.getX(),pos2.getY(),pos2.getZ());
+                worldIn.spawnEntityInWorld(femme);
             }
         }
-
         return true;
     }
 

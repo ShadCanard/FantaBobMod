@@ -4,9 +4,14 @@ import com.shadcanard.fbm.FantaBobMod;
 import com.shadcanard.fbm.references.Names;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.init.Items;
+import net.minecraft.init.PotionTypes;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionEffect;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.datafix.fixes.PotionItems;
 import net.minecraft.world.World;
 
 import javax.annotation.Nullable;

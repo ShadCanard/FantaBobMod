@@ -13,6 +13,7 @@ import com.shadcanard.fbm.init.ModArmor;
 import com.shadcanard.fbm.init.ModBlocks;
 import com.shadcanard.fbm.init.ModEntities;
 import com.shadcanard.fbm.init.ModItems;
+import com.shadcanard.fbm.materials.ModMaterials;
 import com.shadcanard.fbm.proxy.CommonProxy;
 import com.shadcanard.fbm.references.Reference;
 import com.shadcanard.fbm.utils.LogHelper;
@@ -47,6 +48,8 @@ public class FantaBobMod {
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
         LogHelper.info("Loading Blocks");
         ModBlocks.init();
+
+        ModMaterials.init();
         LogHelper.info("Loading Items");
         ModItems.init();
         LogHelper.info("Loading Armor");
